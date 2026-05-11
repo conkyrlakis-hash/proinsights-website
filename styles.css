@@ -303,6 +303,68 @@ a:hover { text-decoration: underline; }
   .hero { padding: 50px 0 70px; }
 }
 
+/* ─── Hero screenshot (real product) ─── */
+.hero-shot {
+  position: relative;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.hero-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow:
+    0 30px 80px rgba(10,37,64,0.18),
+    0 12px 32px rgba(10,37,64,0.10);
+  border: 1px solid rgba(10,37,64,0.06);
+}
+.hero-shot-caption {
+  margin: 14px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  font-style: italic;
+}
+
+/* ─── Founder block ─── */
+.founder {
+  padding: 80px 0;
+  background: var(--gold-light);
+  border-top: 1px solid rgba(200,155,60,0.2);
+  border-bottom: 1px solid rgba(200,155,60,0.2);
+}
+.founder-inner {
+  max-width: 720px;
+}
+.founder-prose {
+  margin-top: 18px;
+}
+.founder-lead {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 18px;
+  font-weight: 500;
+  font-style: italic;
+}
+.founder-lead:last-of-type {
+  margin-bottom: 24px;
+}
+.founder-sig {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: normal;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 820px) {
+  .founder { padding: 60px 0; }
+  .founder-lead { font-size: 18px; }
+}
+
 /* ─── Trust strip ─── */
 .trust {
   padding: 40px 0;
