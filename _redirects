@@ -1,0 +1,9 @@
+# Cloudflare Pages redirects
+# https://developers.cloudflare.com/pages/platform/redirects/
+
+/home              /                              301
+/demo              /#contact                      301
+/sample            /sample-hotel.html             301
+/pricing           /#pricing                      301
+/features          /#features                     301
+/faq               /#faq                          301

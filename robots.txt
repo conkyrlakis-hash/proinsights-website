@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /sample-hotel.html
+Disallow: /sample-restaurant.html
+
+Sitemap: https://proinsights.com.cy/sitemap.xml
