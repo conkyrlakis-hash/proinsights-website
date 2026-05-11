@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Privacy Policy · ProInsights</title>
+<meta name="description" content="How ProInsights collects, uses, and protects data for customers and review subjects.">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-row">
+    <a href="/" class="brand">
+      <img src="https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png" alt="ProInsights" class="brand-logo">
+    </a>
+    <nav class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#sample">Sample report</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact" class="btn btn-ghost">Book demo</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="container legal-container">
+    <p class="eyebrow">PRIVACY POLICY</p>
+    <h1>How we handle data.</h1>
+    <p class="legal-meta">Last updated: 11 May 2026 · Version 1.0 · Plain-language summary first, then detail.</p>
+
+    <div class="legal-summary">
+      <h2>The short version</h2>
+      <ul>
+        <li><strong>We process review data that is already public.</strong> Reviews on Google, TripAdvisor, Booking.com — we read them, we don't republish anything that wasn't public.</li>
+        <li><strong>EU data centres.</strong> Our database is in Frankfurt (Neon Postgres). Our AI processing uses Anthropic (Claude). Email delivery via Brevo (EU-based, French company).</li>
+        <li><strong>We don't sell or share your customer list.</strong> Ever.</li>
+        <li><strong>You can ask us to delete anything.</strong> One email to <a href="mailto:hello@proinsights.com.cy">hello@proinsights.com.cy</a> and we erase your tenant data within 14 days.</li>
+        <li><strong>This is a draft.</strong> Reviewed by you, not yet by a Cyprus or German lawyer. We'll publish a counsel-reviewed v2 before any paid acquisition campaign.</li>
+      </ul>
+    </div>
+
+    <h2>1. Who we are</h2>
+    <p>ProInsights is a service operated by an independent Cyprus-based business. Contact: <a href="mailto:hello@proinsights.com.cy">hello@proinsights.com.cy</a>. Postal address available on request to customers.</p>
+
+    <h2>2. What we collect</h2>
+
+    <h3>2.1 From you, our customer</h3>
+    <ul>
+      <li>Business name, contact name, email address(es), phone number(s) for WhatsApp delivery</li>
+      <li>The venues you want us to track (your business + competitors)</li>
+      <li>Your operating language and timezone</li>
+      <li>Optional: brand assets (logo) for your reports</li>
+      <li>Billing details — handled by our invoicing platform (no card data stored by us today; once we add Stripe in 2026 this will change and we'll update this policy)</li>
+    </ul>
+
+    <h3>2.2 From third parties (Google, TripAdvisor, Booking.com)</h3>
+    <ul>
+      <li>Review text and star rating for your tracked venues and your competitors</li>
+      <li>Reviewer display name (as published on the source platform)</li>
+      <li>Review date and any owner-reply text</li>
+      <li>Aggregate venue ratings and review counts</li>
+    </ul>
+    <p>All of this data is already public on the source platforms. We retrieve it via the SerpAPI service (USA-based, GDPR-aware) which acts as a sub-processor.</p>
+
+    <h3>2.3 What we DO NOT collect</h3>
+    <ul>
+      <li>Payment card data (no Stripe integration in current build)</li>
+      <li>Browser cookies on your customers (we have no consumer-facing analytics)</li>
+      <li>Your guests' personal data beyond what they themselves wrote in a public review</li>
+      <li>Any data from sources you didn't authorise (we don't crawl, we only fetch what you configured)</li>
+    </ul>
+
+    <h2>3. How we use it</h2>
+    <ul>
+      <li>To generate your daily, weekly, and monthly review intelligence reports</li>
+      <li>To run AI sentiment + theme analysis (via Anthropic Claude API)</li>
+      <li>To draft suggested owner-replies (Pro/Expert tiers only)</li>
+      <li>To benchmark you against the competitors you specified</li>
+      <li>To detect 1-star alerts and notify you within 30 minutes (Pro/Expert tiers)</li>
+      <li>To bill you and respond to support requests</li>
+    </ul>
+
+    <h2>4. Who else processes the data (sub-processors)</h2>
+    <table class="legal-table">
+      <thead><tr><th>Sub-processor</th><th>Purpose</th><th>Region</th></tr></thead>
+      <tbody>
+        <tr><td>SerpAPI</td><td>Fetching public reviews from Google/TripAdvisor/etc</td><td>USA — Standard Contractual Clauses</td></tr>
+        <tr><td>Neon (Postgres database)</td><td>Storing your tenant config + review history</td><td>EU (Frankfurt)</td></tr>
+        <tr><td>Anthropic (Claude AI)</td><td>Sentiment + theme analysis + reply drafting</td><td>USA — SCCs; no training on customer data</td></tr>
+        <tr><td>Brevo (formerly Sendinblue)</td><td>Outbound email delivery</td><td>EU (France)</td></tr>
+        <tr><td>SendGrid (Twilio)</td><td>Outbound email for the Ararat-domain tenant</td><td>USA — SCCs</td></tr>
+        <tr><td>Twilio</td><td>WhatsApp + SMS for alerts (Pro/Expert)</td><td>USA — SCCs; Ireland for EU traffic</td></tr>
+        <tr><td>GitHub</td><td>Code repos + scheduled actions runtime</td><td>USA — SCCs</td></tr>
+        <tr><td>Cloudflare</td><td>DNS, CDN, Pages hosting</td><td>Global; EU PoPs for EU traffic</td></tr>
+      </tbody>
+    </table>
+    <p>If you require a Data Processing Agreement (DPA), email us — we'll sign the standard EDPB-aligned template.</p>
+
+    <h2>5. Data retention</h2>
+    <ul>
+      <li><strong>Review history:</strong> kept as long as you're a customer, plus 90 days after cancellation for portability requests</li>
+      <li><strong>Generated reports:</strong> 12 months of daily reports, archived</li>
+      <li><strong>Logs &amp; debugging data:</strong> 30 days rolling</li>
+      <li><strong>Billing records:</strong> 7 years (Cyprus accounting requirements)</li>
+    </ul>
+    <p>On cancellation: tenant data is wiped within 14 days unless you request a longer retention. Aggregated, anonymous metrics may be retained for product analytics.</p>
+
+    <h2>6. Your rights under GDPR</h2>
+    <p>If you're in the EU/UK/EEA you have the right to:</p>
+    <ul>
+      <li>Access the data we hold about you</li>
+      <li>Request correction of inaccurate data</li>
+      <li>Request erasure (subject to billing-record retention obligations)</li>
+      <li>Request portability (data export in CSV/JSON)</li>
+      <li>Object to processing or restrict it</li>
+      <li>Lodge a complaint with your national supervisory authority</li>
+    </ul>
+    <p>Email <a href="mailto:hello@proinsights.com.cy">hello@proinsights.com.cy</a> with subject line "GDPR request" and we'll respond within 30 days.</p>
+
+    <h2>7. Reviewers' rights</h2>
+    <p>If you are a person whose review was processed by ProInsights and you want it removed from our processing: email us with the review URL (Google / TripAdvisor link) and we'll exclude it from future analysis within 14 days. We cannot remove the review from the source platform — you'll need to contact them directly.</p>
+
+    <h2>8. Security</h2>
+    <ul>
+      <li>TLS 1.2+ for all data in transit</li>
+      <li>Database access restricted to production service accounts; no direct human access</li>
+      <li>API keys for AI/email/WhatsApp are GitHub Actions encrypted secrets</li>
+      <li>Annual review of access logs and credential rotation</li>
+    </ul>
+
+    <h2>9. Children</h2>
+    <p>ProInsights is a B2B service and not directed at children. We don't knowingly process data about anyone under 16.</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>Material changes will be emailed to all customers at least 30 days before they take effect. The "Last updated" date at the top of this page is the source of truth.</p>
+
+    <h2>11. Contact</h2>
+    <p>For privacy questions or data-subject requests: <a href="mailto:hello@proinsights.com.cy">hello@proinsights.com.cy</a>.</p>
+
+    <div class="legal-back">
+      <a href="/" class="btn btn-ghost-dark">← Back to ProInsights</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-base">
+    © 2026 ProInsights. <a href="/">Home</a> · <a href="/terms.html">Terms</a> · <a href="/gdpr.html">GDPR</a> · <a href="mailto:hello@proinsights.com.cy">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

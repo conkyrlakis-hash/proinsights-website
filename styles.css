@@ -898,3 +898,106 @@ a:hover { text-decoration: underline; }
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* ─── Legal pages (privacy / terms / gdpr) ─── */
+.legal {
+  padding: 60px 0 100px;
+  background: var(--white);
+}
+.legal-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.legal h1 {
+  font-size: 42px;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+.legal h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.legal-summary h2 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: 0.5px;
+}
+.legal h3 {
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+.legal p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0 0 14px;
+  color: var(--ink-soft);
+}
+.legal ul {
+  padding-left: 22px;
+  margin: 0 0 18px;
+}
+.legal li {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 6px;
+  color: var(--ink-soft);
+}
+.legal strong { color: var(--ink); }
+.legal a { color: var(--navy); text-decoration: underline; }
+.legal a:hover { color: var(--gold); }
+.legal-meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 32px;
+}
+.legal-summary {
+  background: var(--gold-light);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  padding: 22px 26px;
+  margin: 24px 0 40px;
+}
+.legal-summary ul { margin: 12px 0 0; }
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 18px;
+  font-size: 14px;
+}
+.legal-table thead th {
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-bottom: 2px solid var(--line);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+.legal-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  vertical-align: top;
+}
+.legal-back {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+  .legal h1 { font-size: 30px; }
+  .legal h2 { font-size: 20px; }
+  .legal-table { font-size: 12px; }
+  .legal-table td, .legal-table th { padding: 8px 6px; }
+}

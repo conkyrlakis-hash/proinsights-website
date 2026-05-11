@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GDPR Compliance · ProInsights</title>
+<meta name="description" content="ProInsights GDPR compliance statement — EU data location, sub-processors, DPA on request, data subject rights.">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-row">
+    <a href="/" class="brand">
+      <img src="https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png" alt="ProInsights" class="brand-logo">
+    </a>
+    <nav class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#sample">Sample report</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact" class="btn btn-ghost">Book demo</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="container legal-container">
+    <p class="eyebrow">GDPR COMPLIANCE</p>
+    <h1>How we handle EU data, in detail.</h1>
+    <p class="legal-meta">Last updated: 11 May 2026 · Version 1.0 · Aligned with EU Regulation 2016/679 (GDPR).</p>
+
+    <div class="legal-summary">
+      <h2>The short version</h2>
+      <ul>
+        <li><strong>EU data centres for storage.</strong> Tenant data in Frankfurt (Neon Postgres). Email delivery via Brevo (France).</li>
+        <li><strong>SCCs for any data crossing the Atlantic.</strong> Standard Contractual Clauses cover our US sub-processors (Anthropic, SerpAPI, GitHub, Cloudflare US PoPs, Twilio US, SendGrid).</li>
+        <li><strong>Data Processing Agreement on request.</strong> Email us and we'll countersign the EDPB-aligned template within 5 business days.</li>
+        <li><strong>You stay the controller.</strong> We're the processor. We process on your documented instructions only.</li>
+        <li><strong>Sub-processor changes get 30-day notice.</strong> If we add or change a sub-processor that handles your data, we'll email you 30 days before the change takes effect.</li>
+      </ul>
+    </div>
+
+    <h2>1. Role under GDPR</h2>
+    <p>For the data you provide to us (your business details, contact info, venue config), we are the data <strong>controller</strong> for billing and account management purposes.</p>
+    <p>For the review data we process on your behalf (reviewer names, review text from public platforms), we act as the data <strong>processor</strong> — you are the controller, and we process under your instructions documented in our Terms of Service.</p>
+
+    <h2>2. Lawful basis for processing</h2>
+    <ul>
+      <li><strong>Customer account data:</strong> Contract (Art. 6(1)(b)) — necessary to deliver the service you signed up for.</li>
+      <li><strong>Review data from public platforms:</strong> Legitimate interest (Art. 6(1)(f)) — operators have a legitimate interest in monitoring their public online reputation; the data is already public. Balanced against the reasonable expectations of the reviewer who posted publicly on a platform that exists for venue reputation.</li>
+      <li><strong>WhatsApp delivery:</strong> Explicit consent (Art. 6(1)(a)) — you opt in during onboarding; revocable by replying STOP or emailing us.</li>
+      <li><strong>Billing records:</strong> Legal obligation (Art. 6(1)(c)) — Cyprus accounting law requires 7-year retention.</li>
+    </ul>
+
+    <h2>3. Data location &amp; transfers</h2>
+
+    <h3>3.1 Where your data lives</h3>
+    <ul>
+      <li><strong>Primary database:</strong> Neon Postgres, EU-West region (Frankfurt, Germany)</li>
+      <li><strong>Daily report HTML archive:</strong> Cloudflare R2 / GitHub repo, EU-PoPs prioritised</li>
+      <li><strong>Email delivery infrastructure:</strong> Brevo (Sendinblue) — France-based, EU-only servers for EU customers</li>
+      <li><strong>Code &amp; scheduled jobs:</strong> GitHub Actions — USA, with SCCs in place</li>
+    </ul>
+
+    <h3>3.2 International transfers</h3>
+    <p>Some sub-processors are USA-based and necessarily process data outside the EU:</p>
+    <ul>
+      <li>Anthropic (Claude AI) — covered by EU-US Data Privacy Framework + SCCs</li>
+      <li>SerpAPI — covered by SCCs</li>
+      <li>Twilio — uses EU PoPs (Ireland) for EU traffic; SCCs for any US fallback</li>
+      <li>GitHub — covered by EU-US Data Privacy Framework + SCCs</li>
+      <li>SendGrid (Twilio) — used only for the Ararat tenant on a US-domain; SCCs apply</li>
+    </ul>
+    <p>We do not use a single sub-processor that requires data to leave the EU when an EU alternative exists at comparable quality.</p>
+
+    <h2>4. Data subject rights</h2>
+    <p>If you are a person whose data we process (either as a customer or as a public reviewer), you have these rights:</p>
+    <ul>
+      <li><strong>Right of access (Art. 15):</strong> Request a copy of what we hold.</li>
+      <li><strong>Right to rectification (Art. 16):</strong> Correct inaccurate data.</li>
+      <li><strong>Right to erasure (Art. 17):</strong> "Right to be forgotten" — we delete within 14 days unless a legal obligation requires retention.</li>
+      <li><strong>Right to restrict processing (Art. 18):</strong> Pause processing while we investigate a complaint.</li>
+      <li><strong>Right to portability (Art. 20):</strong> Export in CSV or JSON.</li>
+      <li><strong>Right to object (Art. 21):</strong> Object to processing based on legitimate interest.</li>
+      <li><strong>Right to withdraw consent (Art. 7):</strong> Where consent is the lawful basis (e.g. WhatsApp), withdraw anytime.</li>
+      <li><strong>Right not to be subject to automated decision-making (Art. 22):</strong> Our AI-drafted replies are advisory; final decisions are always human. No solely-automated decisions that produce legal effects are made by ProInsights.</li>
+      <li><strong>Right to lodge a complaint:</strong> With your national supervisory authority. Cyprus residents: <a href="https://www.dataprotection.gov.cy" target="_blank" rel="noopener">Office of the Commissioner for Personal Data Protection</a>.</li>
+    </ul>
+    <p>To exercise any right: email <a href="mailto:hello@proinsights.com.cy">hello@proinsights.com.cy</a> with subject "GDPR request — [your right]". We respond within 30 days. If we need to extend (max 60 more days), we'll tell you why.</p>
+
+    <h2>5. Reviewers — special note</h2>
+    <p>If you are a person who posted a review on Google, TripAdvisor, Booking.com, etc., and you discovered we are processing your review:</p>
+    <ul>
+      <li>The review remains visible on the source platform because we don't control them. Contact the source platform to remove the public review itself.</li>
+      <li>However, we will exclude your review from our processing on request — email us the review URL and we stop analysing or referencing it in customer reports within 14 days.</li>
+      <li>This means the venue you reviewed will no longer see your review in their daily ProInsights report. The review remains public on the original platform.</li>
+    </ul>
+
+    <h2>6. Data Processing Agreement (DPA)</h2>
+    <p>EU customers can request a signed DPA at any time. We use a template aligned with the EDPB's "Guidelines 07/2020 on the concepts of controller and processor under the GDPR" and the Commission's 2021 Standard Contractual Clauses.</p>
+    <p>To request: email <a href="mailto:hello@proinsights.com.cy">hello@proinsights.com.cy</a> with subject "DPA request". We countersign within 5 business days.</p>
+
+    <h2>7. Sub-processor list</h2>
+    <p>The authoritative sub-processor list is in our <a href="/privacy.html#sub-processors">Privacy Policy section 4</a>. Material changes get 30-day notice by email to all customers; you have the right to terminate without penalty if you object to a new sub-processor.</p>
+
+    <h2>8. Data breach notification</h2>
+    <p>If we become aware of a personal-data breach that creates a risk to data subjects:</p>
+    <ul>
+      <li>We notify the national supervisory authority within 72 hours of becoming aware</li>
+      <li>We notify affected customers without undue delay if the risk to them is high</li>
+      <li>We log the breach and our response in an internal register kept for at least 5 years</li>
+    </ul>
+
+    <h2>9. Records of processing</h2>
+    <p>Per Art. 30 GDPR, we maintain a Record of Processing Activities (ROPA). EU customers can request it on a confidentiality basis.</p>
+
+    <h2>10. Data Protection Officer</h2>
+    <p>ProInsights does not currently meet the thresholds requiring a designated DPO under Art. 37 (we are not a public authority; our core activities don't involve large-scale monitoring of EU data subjects or large-scale processing of special categories). The point of contact for all GDPR matters is <a href="mailto:hello@proinsights.com.cy">hello@proinsights.com.cy</a>. We will appoint a DPO if our processing scale changes to meet the threshold.</p>
+
+    <h2>11. Children</h2>
+    <p>ProInsights is a B2B service for hospitality operators, not directed at children. We don't knowingly collect data about anyone under 16. If you believe we have, contact us immediately and we will delete it.</p>
+
+    <h2>12. Special categories of data</h2>
+    <p>We do not intentionally process special categories of data (Art. 9 — health, race, religion, sexual orientation, etc.). If a reviewer voluntarily includes such information in a public review, our AI processing may incidentally encounter it. We exclude these reviews from the AI-draft-reply pipeline (they trigger the "sensitive content" flag for manual handling) and do not use them for any analytical aggregation.</p>
+
+    <h2>13. Contact</h2>
+    <p>All GDPR matters: <a href="mailto:hello@proinsights.com.cy">hello@proinsights.com.cy</a>. Subject line "GDPR" routes to priority.</p>
+
+    <div class="legal-back">
+      <a href="/" class="btn btn-ghost-dark">← Back to ProInsights</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-base">
+    © 2026 ProInsights. <a href="/">Home</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:hello@proinsights.com.cy">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
