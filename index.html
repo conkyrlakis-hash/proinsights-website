@@ -9,7 +9,7 @@
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600&family=Fraunces:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0F0F1A;
@@ -18,6 +18,7 @@
     --ink: #F5F5F7;
     --muted: #8892b0;
     --line: rgba(255,255,255,0.08);
+    --accent: #6c5ce7;
   }
   * { box-sizing: border-box; }
   body {
@@ -29,36 +30,26 @@
     line-height: 1.6;
   }
   a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
 
-  .wrap {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
-
-  /* Hero */
-  .pick-hero {
-    padding: 80px 0 40px;
-    text-align: center;
-  }
+  .pick-hero { padding: 80px 0 40px; text-align: center; }
   .pick-eyebrow {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
     font-size: 11px;
-    letter-spacing: 3px;
-    color: var(--gold);
+    letter-spacing: 2.5px;
+    color: var(--accent);
     margin: 0 0 16px;
     text-transform: uppercase;
   }
   .pick-hero h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: clamp(36px, 6vw, 60px);
-    line-height: 1.05;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.1;
     letter-spacing: -1.5px;
     margin: 0 0 18px;
     color: var(--ink);
-    text-transform: uppercase;
   }
   .pick-hero p {
     max-width: 640px;
@@ -68,26 +59,26 @@
     line-height: 1.7;
   }
 
-  /* Cards */
+  /* Two large cards */
   .pick-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    padding: 50px 0 80px;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 60px 0 80px;
   }
   .pick-card {
     background: var(--bg-soft);
     border: 1px solid var(--line);
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
     transition: all 0.2s ease;
     display: flex;
     flex-direction: column;
   }
   .pick-card:hover {
-    border-color: var(--gold);
+    border-color: var(--accent);
     transform: translateY(-4px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    box-shadow: 0 24px 60px rgba(108,92,231,0.20);
   }
   .pick-card-img {
     width: 100%;
@@ -98,85 +89,67 @@
     object-fit: cover;
     object-position: top;
   }
-  .pick-card-body {
-    padding: 26px 26px 28px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
+  .pick-card-body { padding: 32px 32px 36px; flex: 1; display: flex; flex-direction: column; }
   .pick-card-tag {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 2px;
-    color: var(--gold);
-    margin: 0 0 10px;
+    color: var(--accent);
+    margin: 0 0 12px;
     text-transform: uppercase;
   }
   .pick-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 22px;
-    letter-spacing: -0.3px;
-    margin: 0 0 12px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    margin: 0 0 14px;
     color: var(--ink);
   }
   .pick-card-summary {
-    font-size: 14px;
+    font-size: 14.5px;
     color: var(--muted);
-    margin: 0 0 16px;
-    line-height: 1.65;
+    margin: 0 0 18px;
+    line-height: 1.7;
     flex: 1;
   }
   .pick-card-meta {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 600;
-    font-size: 10.5px;
+    font-size: 11px;
     letter-spacing: 1.5px;
     color: rgba(255,255,255,0.5);
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     text-transform: uppercase;
   }
   .pick-card-meta span {
     display: inline-block;
-    margin-right: 8px;
-    padding-right: 8px;
+    margin-right: 10px;
+    padding-right: 10px;
     border-right: 1px solid var(--line);
   }
   .pick-card-meta span:last-child { border-right: none; }
-  .pick-card-actions {
-    display: flex;
-    gap: 10px;
-  }
+  .pick-card-actions { display: flex; gap: 10px; }
   .btn {
     flex: 1;
     text-align: center;
-    padding: 12px 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    border-radius: 4px;
+    padding: 13px 16px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border-radius: 999px;
     text-decoration: none !important;
     transition: all 0.15s;
-    text-transform: uppercase;
     cursor: pointer;
     border: 1.5px solid transparent;
   }
-  .btn-primary {
-    background: var(--gold);
-    color: #1a1a2e;
-    border-color: var(--gold);
-  }
-  .btn-primary:hover { background: #b08628; border-color: #b08628; }
-  .btn-ghost {
-    background: transparent;
-    color: var(--ink);
-    border-color: rgba(255,255,255,0.25);
-  }
-  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+  .btn-primary { background: var(--accent); color: var(--white); border-color: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #594ad4; border-color: #594ad4; }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: rgba(255,255,255,0.25); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* Footer note */
   .pick-footer {
     border-top: 1px solid var(--line);
     padding: 40px 0;
@@ -185,20 +158,17 @@
     font-size: 13px;
   }
   .pick-footer p { margin: 0 0 8px; }
-  .pick-footer a { color: var(--gold); }
+  .pick-footer a { color: var(--accent); }
   .pick-footer a:hover { text-decoration: underline; }
   .pick-footer code {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: ui-monospace, monospace;
     background: var(--bg-soft);
     padding: 2px 6px;
     border-radius: 3px;
     font-size: 12px;
   }
 
-  @media (max-width: 1024px) {
-    .pick-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 720px) {
+  @media (max-width: 900px) {
     .pick-grid { grid-template-columns: 1fr; }
     .pick-card-actions { flex-direction: column; }
   }
@@ -210,23 +180,23 @@
 
   <section class="pick-hero">
     <p class="pick-eyebrow">PROINSIGHTS · DESIGN REVIEW</p>
-    <h1>Three designs.<br>Pick the one we ship.</h1>
-    <p>All three render the same content (features, pricing, founder note, sample links, contact). The difference is the personality and the visual language. Open each in full screen, scroll end-to-end, and reply with <strong>A</strong>, <strong>B</strong>, or <strong>C</strong>.</p>
+    <h1>Two designs based on your Wix references.</h1>
+    <p>I rebuilt both based on the two Wix templates you sent (the Analytix data-product landing and the clics ad-tech gradient page). Same content underneath — the difference is the visual language. Open each in full screen and reply <strong>A</strong> or <strong>B</strong>.</p>
   </section>
 
   <section class="pick-grid">
 
-    <!-- ─── A ─── -->
     <article class="pick-card">
       <img class="pick-card-img" src="card-design-a.jpg" alt="Design A preview">
       <div class="pick-card-body">
-        <p class="pick-card-tag">OPTION A</p>
-        <h3>Modern bold-block</h3>
-        <p class="pick-card-summary">Navy + gold. Stacked all-caps Montserrat. Alternating dark/light bands. Product screenshot in the hero. Real-feel SaaS landing page; confident but not template-y.</p>
+        <p class="pick-card-tag">OPTION A · Analytix-style</p>
+        <h3>Modern data product</h3>
+        <p class="pick-card-summary">White background. Split hero: 3D stacked gradient sculpture on the left, "The smartest way to read your reviews." on the right. Manrope sans, headline case. Three-up pale cards, accordion sections, phone mockup with WhatsApp preview. Modern data-SaaS feel — similar to Datadog, Linear, Snowflake.</p>
         <p class="pick-card-meta">
-          <span>NAVY + GOLD</span>
-          <span>MONTSERRAT 900</span>
-          <span>SCREENSHOT HERO</span>
+          <span>WHITE + LAVENDER</span>
+          <span>MANROPE 700</span>
+          <span>3D GRADIENT HERO</span>
+          <span>PHONE MOCKUP</span>
         </p>
         <div class="pick-card-actions">
           <a class="btn btn-primary" href="design-a.html">OPEN A →</a>
@@ -235,17 +205,17 @@
       </div>
     </article>
 
-    <!-- ─── B ─── -->
     <article class="pick-card">
       <img class="pick-card-img" src="card-design-b.jpg" alt="Design B preview">
       <div class="pick-card-body">
-        <p class="pick-card-tag">OPTION B</p>
-        <h3>Wix Socialight clone</h3>
-        <p class="pick-card-summary">Faithful adaptation of the Wix template you've been editing. Bold purple hero. Stacked black headline. Agency cadence. Fast Facts band. Contact form. Strong personality, very 2020.</p>
+        <p class="pick-card-tag">OPTION B · clics-style</p>
+        <h3>Soft pastel gradient SaaS</h3>
+        <p class="pick-card-summary">Cream background. Full-bleed soft pastel gradient hero (pink → lavender → peach). Centered headline "Manage and respond to reviews on every platform with ProInsights." Floating dashboard cards. Gradient blob illustrations. Newsletter-style contact. Modern soft-SaaS feel — similar to Stripe, Notion, Linear's marketing site.</p>
         <p class="pick-card-meta">
-          <span>PURPLE + CHARCOAL</span>
-          <span>MONTSERRAT 900</span>
-          <span>TEXT-ONLY HERO</span>
+          <span>CREAM + PASTELS</span>
+          <span>MANROPE 500</span>
+          <span>FULL-BLEED GRADIENT</span>
+          <span>FLOATING CARDS</span>
         </p>
         <div class="pick-card-actions">
           <a class="btn btn-primary" href="design-b.html">OPEN B →</a>
@@ -254,34 +224,11 @@
       </div>
     </article>
 
-    <!-- ─── C ─── -->
-    <article class="pick-card">
-      <img class="pick-card-img" src="card-design-c.jpg" alt="Design C preview">
-      <div class="pick-card-body">
-        <p class="pick-card-tag">OPTION C</p>
-        <h3>Editorial / Magazine</h3>
-        <p class="pick-card-summary">Cream paper. Fraunces serif. Long-form columns. Big lede with italic accent. No color blocking. Reads like a Bloomberg / Stratechery / Substack page. Premium, slow, considered.</p>
-        <p class="pick-card-meta">
-          <span>CREAM + GOLD</span>
-          <span>FRAUNCES SERIF</span>
-          <span>EDITORIAL</span>
-        </p>
-        <div class="pick-card-actions">
-          <a class="btn btn-primary" href="design-c.html">OPEN C →</a>
-          <a class="btn btn-ghost" href="design-c.html" target="_blank">NEW TAB</a>
-        </div>
-      </div>
-    </article>
-
   </section>
 
   <section class="pick-footer">
-    <p>
-      Reply <strong>A</strong>, <strong>B</strong>, or <strong>C</strong> and I'll remove the chooser and ship that one as the live homepage at <code>proinsights.com.cy</code>.
-    </p>
-    <p>
-      Pages shared across all three: <a href="sample-hotel.html">hotel sample</a> · <a href="sample-restaurant.html">restaurant sample</a> · <a href="privacy.html">privacy</a> · <a href="terms.html">terms</a> · <a href="gdpr.html">GDPR</a>
-    </p>
+    <p>Reply <strong>A</strong> or <strong>B</strong> and I'll wire up the chosen design as the live homepage at <code>proinsights.com.cy</code>.</p>
+    <p>Shared pages: <a href="sample-hotel.html">hotel sample</a> · <a href="sample-restaurant.html">restaurant sample</a> · <a href="privacy.html">privacy</a> · <a href="terms.html">terms</a> · <a href="gdpr.html">GDPR</a></p>
   </section>
 
 </main>
