@@ -735,3 +735,524 @@ a { color: inherit; text-decoration: none; }
 }
 
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+
+/* ──────────────────────────────────────────────────────────────────────
+   SEO-page additions (commercial pages, Cyprus pages, blog)
+   Sits on top of the existing design-b.css design system.
+   ────────────────────────────────────────────────────────────────────── */
+
+/* ──── Breadcrumb ──── */
+.breadcrumb {
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+  font-size: 12.5px;
+}
+.breadcrumb-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px var(--pad);
+  color: var(--muted);
+}
+.breadcrumb a {
+  color: var(--ink-soft);
+  transition: color 0.15s;
+}
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb [aria-current="page"] { color: var(--ink); font-weight: 500; }
+.crumb-sep { color: var(--muted); margin: 0 8px; }
+
+/* ──── Smaller hero (used on inner pages) ──── */
+.hero.hero-small {
+  padding: 60px 0 50px;
+  background: var(--cream);
+  text-align: left;
+}
+.hero-inner.narrow {
+  max-width: var(--max-narrow);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: block;
+}
+.hero-small h1 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -1.2px;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+.hero-small .hero-text p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0 0 26px;
+}
+
+/* ──── Buttons used on inner pages ──── */
+.btn-ghost {
+  display: inline-block;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 13px 24px;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  margin-left: 10px;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-ghost:hover { background: var(--ink); color: var(--white); }
+.btn-light {
+  display: inline-block;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--ink);
+  transition: background 0.15s;
+}
+.btn-light:hover { background: var(--blue-pale); }
+.btn-ghost-light {
+  display: inline-block;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 13px 24px;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.4);
+  margin-left: 10px;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-ghost-light:hover { background: var(--white); color: var(--ink); }
+
+/* ──── Bands (alternating sections) ──── */
+.band-narrow { max-width: var(--max-narrow); margin: 0 auto; padding: 0 var(--pad); }
+.band-inner.center { text-align: center; }
+.band-lead { font-size: 16px; line-height: 1.75; color: var(--ink-soft); margin: 14px auto 32px; max-width: 720px; }
+.band-lead.center { text-align: center; }
+
+.band {
+  padding: 70px 0;
+}
+.band-cream { background: var(--cream); }
+.band-white { background: var(--white); }
+.band-ink {
+  background: linear-gradient(135deg, #0b0a0e 0%, #1a1a2e 100%);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+.band-ink .h-big, .band-ink h2.light { color: var(--white); }
+.band-ink .band-lead, .band-ink .band-lead.light { color: rgba(255,255,255,0.75); }
+
+.section-tag {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+.h-big {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.15;
+  color: var(--ink);
+  letter-spacing: -0.8px;
+  margin: 0 0 18px;
+}
+.h-medium {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 30px);
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+/* ──── 3-up cards (already exists in design-b but we add linkable variant) ──── */
+.why-card.linkable {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+.why-card.linkable:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(11,10,14,0.08);
+}
+
+/* ──── Prose styling (blog articles + long-form content) ──── */
+.prose {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--ink);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.prose h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.4px;
+  color: var(--ink);
+  margin: 50px 0 16px;
+  line-height: 1.25;
+}
+.prose h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--ink);
+  margin: 36px 0 12px;
+}
+.prose p { margin: 0 0 18px; }
+.prose ul, .prose ol {
+  margin: 0 0 24px;
+  padding-left: 22px;
+}
+.prose li { margin-bottom: 8px; }
+.prose strong { color: var(--ink); font-weight: 600; }
+.prose a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.prose a:hover { color: var(--ink); }
+.prose code {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14.5px;
+  background: var(--cream-deep);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: var(--ink);
+}
+.prose blockquote, .prose .pull-quote {
+  border-left: 4px solid var(--gold, #C89B3C);
+  background: var(--cream);
+  padding: 20px 26px;
+  margin: 30px 0;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink);
+  font-style: normal;
+}
+.prose pre, .prose .example-reply {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 4px;
+  padding: 18px 22px;
+  margin: 24px 0;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink);
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+.prose-table, .prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  font-size: 15px;
+}
+.prose-table th, .prose-table td,
+.prose table th, .prose table td {
+  border: 1px solid var(--line);
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+.prose-table thead, .prose table thead {
+  background: var(--cream);
+}
+.prose-table th, .prose table th {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ──── FAQ ──── */
+.faq-list {
+  max-width: 720px;
+  margin: 30px auto 0;
+}
+.faq-item {
+  border-top: 1px solid var(--line);
+  padding: 18px 0;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-item summary {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+  cursor: pointer;
+  padding-right: 30px;
+  position: relative;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: -2px;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--muted);
+  transition: transform 0.15s;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-answer {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.faq-answer p { margin: 0 0 12px; }
+.faq-answer p:last-child { margin-bottom: 0; }
+
+/* ──── Blog index ──── */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.blog-card {
+  display: block;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 26px 24px;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.blog-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+  box-shadow: 0 8px 24px rgba(11,10,14,0.06);
+}
+.blog-card h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--ink);
+  margin: 8px 0 10px;
+  line-height: 1.3;
+}
+.blog-card .blog-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+.blog-card time {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+@media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+
+/* ──── Blog post styling ──── */
+.post-meta {
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 18px;
+  letter-spacing: 0.3px;
+}
+.post-cat {
+  color: var(--blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.post-h1 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 4.5vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: var(--ink);
+  margin: 0 0 36px;
+  max-width: 720px;
+}
+
+/* ──── Comparison table (for /reviewpro-alternative etc.) ──── */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  font-size: 14.5px;
+}
+.compare-table th,
+.compare-table td {
+  border: 1px solid var(--line);
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+.compare-table thead { background: var(--cream); }
+.compare-table th {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  color: var(--ink);
+}
+.compare-table .yes { color: #00875a; font-weight: 600; }
+.compare-table .no  { color: var(--muted); }
+.compare-table .partial { color: #E08A00; }
+
+/* ──── Inline check/x marks for feature lists ──── */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+.check-list li {
+  position: relative;
+  padding: 10px 0 10px 32px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--line);
+}
+.check-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  color: #00875a;
+  font-weight: 700;
+  font-size: 17px;
+}
+.check-list li:last-child { border-bottom: 0; }
+
+/* ──── Pricing tier cards ──── */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin: 40px 0;
+}
+.tier-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.tier-card.featured {
+  border-color: var(--blue);
+  box-shadow: 0 8px 28px rgba(29,108,242,0.12);
+  position: relative;
+}
+.tier-card.featured::before {
+  content: 'Recommended';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue);
+  color: var(--white);
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+.tier-name {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--blue);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.tier-price {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: var(--ink);
+  margin: 8px 0 4px;
+}
+.tier-price .currency { font-size: 22px; color: var(--muted); }
+.tier-price .per { font-size: 13px; color: var(--muted); margin-left: 4px; }
+.tier-desc {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 0 0 22px;
+  min-height: 60px;
+}
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  flex-grow: 1;
+}
+.tier-features li {
+  position: relative;
+  padding: 7px 0 7px 22px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+}
+.tier-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  color: var(--blue);
+  font-weight: 700;
+}
+@media (max-width: 1024px) { .tier-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px)  { .tier-grid { grid-template-columns: 1fr; } }
+
+/* ──── Featured / metric blocks ──── */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 28px 0;
+}
+.metric-box {
+  background: var(--cream);
+  border-radius: 6px;
+  padding: 20px 22px;
+}
+.metric-num {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1;
+}
+.metric-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 8px 0 0;
+}
+@media (max-width: 720px) { .metric-row { grid-template-columns: 1fr 1fr; } }
+
+/* ──── Small responsive tweaks for the .band system ──── */
+@media (max-width: 720px) {
+  .band { padding: 50px 0; }
+  .hero.hero-small { padding: 40px 0 30px; }
+}
+

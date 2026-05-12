@@ -1,18 +1,80 @@
 # ProInsights — Marketing Website
 
-The public homepage at `https://proinsights.com.cy` — pure HTML/CSS, no framework, deploys to Cloudflare Pages in 5 minutes.
+The public site at `https://proinsights.com.cy` — pure HTML/CSS, no framework, deploys to Cloudflare Pages in 5 minutes.
 
 ## File map
 
 ```
 proinsights-website/
-├── index.html              # Homepage (hero, features, pricing, FAQ, CTA)
-├── styles.css              # All styling — brand-locked navy + gold
-├── sample-hotel.html       # Live demo report — Amarande Hotel (Expert tier)
-├── sample-restaurant.html  # Live demo report — LA VIE Düsseldorf (Pro tier)
-├── README.md               # This file
-└── (optional) privacy.html / terms.html / gdpr.html — to add when launching
+├── index.html                                    # Homepage (hand-maintained)
+├── design-b.css                                  # Shared brand styles (cream + Manrope)
+├── styles.css                                    # Legacy stylesheet (kept for older designs)
+│
+├── build_seo_site.py                             # Static page generator (run when content changes)
+├── _content/
+│   ├── commercial.json                           # Commercial page content (agent-written, override)
+│   ├── blog.json                                 # Blog article content (agent-written, override)
+│   ├── fallback_commercial.json                  # Hand-written fallback for commercial pages
+│   └── fallback_blog.json                        # Hand-written fallback for blog articles
+│
+├── pricing.html                                  # Generated: hotel tier table + standard terms
+├── restaurant-review-management-software.html    # Generated: commercial landing page
+├── hotel-reputation-management-software.html     # Generated: commercial landing page
+├── google-review-monitoring-restaurants.html     # Generated
+├── tripadvisor-review-monitoring-hotels.html     # Generated
+├── ai-review-response-generator-restaurants.html # Generated
+├── hotel-competitor-benchmarking.html            # Generated
+├── guest-feedback-analytics.html                 # Generated
+├── reviewpro-alternative.html                    # Generated (vs ReviewPro)
+│
+├── cyprus/
+│   ├── index.html                                # Cyprus landing hub
+│   ├── restaurant-review-management.html         # Local SEO — Cyprus restaurants
+│   └── hotel-reputation-management.html          # Local SEO — Cyprus hotels
+│
+├── blog/
+│   ├── index.html                                # Blog index
+│   └── [8 articles].html                         # See sitemap.xml for full list
+│
+├── sample-hotel.html                             # Live demo report (Amarande Hotel)
+├── sample-restaurant.html                        # Live demo report (LA VIE Düsseldorf)
+├── privacy.html, terms.html, gdpr.html, 404.html # Legal + error pages
+│
+├── sitemap.xml                                   # Generated (22 URLs as of 2026-05-12)
+├── robots.txt                                    # Generated
+├── _redirects                                    # Cloudflare Pages clean-URL routing
+└── _headers                                      # Cloudflare Pages security headers
 ```
+
+## SEO architecture (as of 2026-05-12)
+
+- **28 HTML pages**, ~39,400 words, 481 KB total
+- **22 URLs in sitemap.xml**: homepage + 9 commercial + 2 Cyprus + Cyprus index + blog index + 8 articles
+- **Every page has**: unique `<title>`, `<meta description>`, canonical URL, OpenGraph + Twitter tags, JSON-LD schema (`Organization`, `WebSite`, `SoftwareApplication`, `FAQPage`, `BreadcrumbList`, `Article` for blog, `LocalBusiness` for Cyprus pages)
+- **Internal linking**: every commercial page links to 3-5 related pages; every blog article links to 2-3 commercial pages
+- **Breadcrumb trail** on every non-homepage page (with `BreadcrumbList` schema)
+
+### How to regenerate after editing content
+
+```bash
+cd proinsights-website
+python build_seo_site.py
+```
+
+This re-reads `_content/commercial.json` + `_content/blog.json`, regenerates every commercial / Cyprus / blog page, and rebuilds `sitemap.xml` + `robots.txt`.
+
+`_content/*.json` ↑ agent-written ↑ overrides ↑ `_content/fallback_*.json` ↓ hand-written ↓ baseline.
+
+### How to add a new commercial page
+
+1. Edit `_content/commercial.json` (or fallback) — add a new entry with `title`, `description`, `h1`, `body_html`, `faq`, `schema_type`, `internal_links`.
+2. Run `python build_seo_site.py`.
+3. The page renders at `/<slug>.html` and is auto-added to `sitemap.xml`.
+4. Commit + push — Cloudflare Pages auto-deploys.
+
+### How to add a new blog article
+
+Same flow, but edit `_content/blog.json`. Pages render under `/blog/`.
 
 ## Local preview
 
