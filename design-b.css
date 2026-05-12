@@ -737,6 +737,125 @@ a { color: inherit; text-decoration: none; }
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
 
 /* ──────────────────────────────────────────────────────────────────────
+   Nav dropdown — "Solutions" menu (CSS-only, no JS framework)
+   Works on hover (desktop), focus-within (keyboard), and click (mobile).
+   ────────────────────────────────────────────────────────────────────── */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.nav-drop-trigger {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s;
+}
+.nav-drop-trigger:hover,
+.nav-drop-trigger:focus { color: var(--blue); outline: none; }
+.nav-drop-chevron {
+  font-size: 10px;
+  transition: transform 0.15s;
+}
+.nav-dropdown:hover .nav-drop-chevron,
+.nav-dropdown:focus-within .nav-drop-chevron,
+.nav-dropdown.open .nav-drop-chevron { transform: rotate(180deg); }
+
+.nav-drop-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  width: 380px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(11,10,14,0.10), 0 4px 8px rgba(11,10,14,0.04);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s, transform 0.15s, visibility 0s linear 0.15s;
+  z-index: 60;
+}
+.nav-dropdown:hover .nav-drop-menu,
+.nav-dropdown:focus-within .nav-drop-menu,
+.nav-dropdown.open .nav-drop-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+  transition: opacity 0.15s, transform 0.15s;
+}
+.nav-drop-menu a {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 14px;
+  border-radius: 4px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  transition: background 0.12s;
+}
+.nav-drop-menu a:hover { background: var(--cream); color: var(--ink); }
+.nav-drop-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.2px;
+}
+.nav-drop-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.nav-drop-sep {
+  height: 1px;
+  background: var(--line);
+  margin: 6px 4px;
+}
+
+/* Mobile: dropdown becomes inline expanded list inside the burger menu */
+@media (max-width: 900px) {
+  .nav-dropdown { width: 100%; }
+  .nav-drop-trigger {
+    width: 100%;
+    text-align: left;
+    padding: 8px 0;
+  }
+  .nav-drop-menu {
+    position: static;
+    transform: none;
+    width: 100%;
+    box-shadow: none;
+    border: 0;
+    background: transparent;
+    padding: 0 0 10px 14px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    display: none;
+  }
+  .nav-dropdown.open .nav-drop-menu,
+  .nav-dropdown:focus-within .nav-drop-menu { display: flex; }
+  .nav-drop-menu a { padding: 8px 0; }
+}
+
+/* ──────────────────────────────────────────────────────────────────────
    SEO-page additions (commercial pages, Cyprus pages, blog)
    Sits on top of the existing design-b.css design system.
    ────────────────────────────────────────────────────────────────────── */
