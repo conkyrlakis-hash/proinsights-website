@@ -994,6 +994,19 @@ a { color: inherit; text-decoration: none; }
   transition: opacity 0.15s, transform 0.15s, visibility 0s linear 0.15s;
   z-index: 60;
 }
+/* Invisible hover bridge: fills the 12px gap between the trigger and the
+   menu so the cursor never falls into "air" while traversing down to a
+   menu item. Without this, :hover toggles off during the crossing and
+   the menu disappears. */
+.nav-drop-menu::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: transparent;
+}
 .nav-dropdown:hover .nav-drop-menu,
 .nav-dropdown:focus-within .nav-drop-menu,
 .nav-dropdown.open .nav-drop-menu {
