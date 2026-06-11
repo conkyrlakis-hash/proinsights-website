@@ -235,7 +235,7 @@ def software_application_schema():
         "name": "ProInsights",
         "applicationCategory": "BusinessApplication",
         "applicationSubCategory": "Online Reputation Management",
-        "operatingSystem": "Web, iOS, Android",
+        "operatingSystem": "Web",
         "description": "AI review intelligence for restaurants and hotels. Daily WhatsApp, email and dashboard reports across Google, TripAdvisor and competitor reviews.",
         "offers": [
             {"@type": "Offer", "name": "Hotel Basic", "price": "79", "priceCurrency": "EUR"},
