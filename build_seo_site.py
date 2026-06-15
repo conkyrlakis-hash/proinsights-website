@@ -50,7 +50,6 @@ NAV_HTML = """
 <header class="nav">
   <div class="nav-inner">
     <a href="/" class="brand">ProInsights.</a>
-    <a href="https://app.proinsights.com.cy/login" class="nav-login">Log in</a>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
         <button class="nav-drop-trigger" type="button" aria-haspopup="true" aria-expanded="false">For your business <span class="nav-drop-chevron">▾</span></button>
@@ -86,6 +85,7 @@ NAV_HTML = """
       <a href="/blog/">Resources</a>
       <a href="/#contact">Contact</a>
     </nav>
+    <a href="https://app.proinsights.com.cy/login" class="nav-login">Log in</a>
     <a href="/#contact" class="nav-cta">Book a demo</a>
     <button class="nav-burger" id="burger" aria-label="Menu">≡</button>
   </div>

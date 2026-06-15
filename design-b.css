@@ -86,9 +86,8 @@ a { color: inherit; text-decoration: none; }
   transition: background 0.15s;
 }
 .nav-cta:hover { background: var(--blue); }
-/* Customer login — secondary, outlined, sits next to the brand (top-left). */
+/* Customer login — secondary, outlined, sits on the right next to the CTA. */
 .nav-login {
-  margin-left: 18px;
   color: var(--ink);
   font-size: 12px;
   font-weight: 600;
