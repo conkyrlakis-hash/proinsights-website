@@ -10,7 +10,7 @@
       {"q": "How quickly will I get my first report?", "a": "Within 24 hours of signing the order form. Onboarding is a 15-minute call where you hand us your Google Business Profile URL and TripAdvisor URL, name your competitors, and pick the tone of voice for AI replies."},
       {"q": "Will the AI ever reply to a review without me seeing it first?", "a": "No. ProInsights drafts replies. You approve or edit them. We never publish on your behalf. Reviews touching food safety, allergy or legal threats are explicitly not auto-drafted at all — they are flagged for human review."},
       {"q": "Can I track dishes by exact name?", "a": "Yes. Named dishes are extracted automatically from review text and grouped by mention count, sentiment, and trend. You can also add your menu items at onboarding so we match informal mentions to the canonical name."},
-      {"q": "How much does it cost for restaurants?", "a": "Restaurant pricing is tailored to your venue size and the number of competitors you want tracked. Email hello@proinsights.com.cy and we will quote within one working day."},
+      {"q": "How much does it cost for restaurants?", "a": "Restaurant pricing is tailored to your venue size and the number of competitors you want tracked. Email info@proinsights.com.cy and we will quote within one working day."},
       {"q": "What happens if I am not getting value after a month?", "a": "Cancel within 30 days of going live and we refund the subscription, no questions asked. No setup fee, no exit fee, no contract trap."}
     ],
     "schema_type": "SoftwareApplication",
@@ -169,7 +169,7 @@
       {"q": "Will this work for a seasonal taverna in Ayia Napa?", "a": "Yes. You can scale up to a higher tier through summer and back down through winter. Monthly billing, no contract trap, no setup fee on either change."},
       {"q": "How do you handle reviews in Russian and Hebrew?", "a": "Russian and Hebrew reviews are read and analysed natively, and the AI draft reply is generated in the same language. Both are common on the south coast and we have tuned the model to handle them properly."},
       {"q": "How quickly will I get my first report?", "a": "Within 24 hours of signature. Onboarding is a 15-minute call — typically in Greek for Cypriot customers — where you hand us your Google and TripAdvisor URLs and name your competitors."},
-      {"q": "What does it cost for a Cyprus restaurant?", "a": "Restaurant pricing is tailored. Most Cypriot restaurants land in the same range as our published hotel tiers (€79 to €189). Email hello@proinsights.com.cy and we will quote within one working day."}
+      {"q": "What does it cost for a Cyprus restaurant?", "a": "Restaurant pricing is tailored. Most Cypriot restaurants land in the same range as our published hotel tiers (€79 to €189). Email info@proinsights.com.cy and we will quote within one working day."}
     ],
     "schema_type": "SoftwareApplication",
     "internal_links": ["/restaurant-review-management-software", "/google-review-monitoring-restaurants", "/ai-review-response-generator-restaurants", "/cyprus/hotel-reputation-management", "/pricing"]

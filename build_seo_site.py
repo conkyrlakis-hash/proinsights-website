@@ -124,7 +124,7 @@ FOOTER_HTML = """
       <a href="/gdpr.html">GDPR</a>
     </div>
   </div>
-  <div class="footer-base">© 2026 ProInsights · hello@proinsights.com.cy</div>
+  <div class="footer-base">© 2026 ProInsights · info@proinsights.com.cy</div>
 </footer>
 <script>
   // Burger menu toggle
@@ -214,7 +214,7 @@ def organization_schema():
         "areaServed": ["CY", "GR", "DE", "EU"],
         "contactPoint": {
             "@type": "ContactPoint",
-            "email": "hello@proinsights.com.cy",
+            "email": "info@proinsights.com.cy",
             "contactType": "Sales",
             "availableLanguage": ["English", "Greek", "German"],
         },

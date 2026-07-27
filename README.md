@@ -192,7 +192,7 @@ Then commit + push — Cloudflare auto-redeploys.
 
 ## Demo request email
 
-Hero "Book a demo" + CTA banner button use `mailto:hello@proinsights.com.cy?subject=Demo request&body=...`. This is fine for v1.
+Hero "Book a demo" + CTA banner button use `mailto:info@proinsights.com.cy?subject=Demo request&body=...`. This is fine for v1.
 
 When volume picks up, replace with a proper form:
 - **Option A:** Cloudflare Pages Functions + Resend / SendGrid email forward (free, native)
@@ -208,7 +208,7 @@ Before going public:
 - [ ] Verify `https://proinsights.com.cy` resolves and serves the site
 - [ ] Verify `https://www.proinsights.com.cy` also resolves
 - [ ] OG image: confirm `proinsights-light-on-dark.png` renders nicely when shared on LinkedIn / WhatsApp
-- [ ] Create `hello@proinsights.com.cy` mailbox so demo emails actually land somewhere
+- [ ] Create `info@proinsights.com.cy` mailbox so demo emails actually land somewhere
 - [ ] Submit to Google Search Console
 - [ ] Add `robots.txt` (allow all) and `sitemap.xml` (the 3 URLs)
 - [ ] Set up Cloudflare Web Analytics (free, no cookies) for traffic visibility
