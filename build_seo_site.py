@@ -86,19 +86,7 @@ NAV_HTML = """
       <a href="/blog/">Resources</a>
       <a href="/#contact">Contact</a>
     </nav>
-    <div class="nav-dropdown nav-login-dd">
-      <button class="nav-drop-trigger nav-login" type="button" aria-haspopup="true" aria-expanded="false">Log in <span class="nav-drop-chevron">▾</span></button>
-      <div class="nav-drop-menu" role="menu">
-        <a href="https://app.proinsights.com.cy/login" role="menuitem">
-          <span class="nav-drop-label">Reviews</span>
-          <span class="nav-drop-desc">Restaurants and hotels: daily review intelligence.</span>
-        </a>
-        <a href="https://sales.proinsights.com.cy" role="menuitem">
-          <span class="nav-drop-label">Sales</span>
-          <span class="nav-drop-desc">Distributors: field sales and sales analytics.</span>
-        </a>
-      </div>
-    </div>
+    <a href="https://app.proinsights.com.cy/login" class="nav-login">Log in</a>
     <a href="/#contact" class="nav-cta">Book a demo</a>
     <button class="nav-burger" id="burger" aria-label="Menu">≡</button>
   </div>
