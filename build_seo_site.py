@@ -49,7 +49,7 @@ CYPRUS_PREFIX = "cyprus/"
 NAV_HTML = """
 <header class="nav">
   <div class="nav-inner">
-    <a href="/" class="brand">ProInsights.</a>
+    <a href="/" class="brand" translate="no">ProInsights.</a>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
         <button class="nav-drop-trigger" type="button" aria-haspopup="true" aria-expanded="false">For your business <span class="nav-drop-chevron">▾</span></button>
@@ -81,6 +81,7 @@ NAV_HTML = """
           </a>
         </div>
       </div>
+      <a href="/sales/">Field sales</a>
       <a href="/pricing">Pricing</a>
       <a href="/blog/">Resources</a>
       <a href="/#contact">Contact</a>
@@ -96,7 +97,7 @@ FOOTER_HTML = """
 <footer class="footer">
   <div class="footer-inner">
     <div>
-      <p class="footer-brand">ProInsights.</p>
+      <p class="footer-brand" translate="no">ProInsights.</p>
       <p class="footer-sub">Daily review intelligence for hospitality.<br>Built in Cyprus 🇨🇾 for European HORECA.</p>
     </div>
     <div>
@@ -115,6 +116,7 @@ FOOTER_HTML = """
     </div>
     <div>
       <h4>Company</h4>
+      <a href="/sales/" translate="no">ProInsights Sales</a>
       <a href="/pricing">Pricing</a>
       <a href="/reviewpro-alternative">ReviewPro alternative</a>
       <a href="/blog/">Blog</a>
@@ -588,6 +590,8 @@ def write_sitemap(commercial_slugs, blog_slugs, cyprus_slugs, output):
     urls = []
     # Homepage
     urls.append(("/", "1.0", "weekly"))
+    # ProInsights Sales product page (generated from _content/sales_page.html)
+    urls.append(("/sales/", "0.9", "monthly"))
     # Commercial pages
     for s in commercial_slugs:
         urls.append((f"/{s}", "0.9", "monthly"))
@@ -619,6 +623,30 @@ def write_robots(output):
         f"Sitemap: {DOMAIN}/sitemap.xml\n"
     )
     output.write_text(body, encoding="utf-8")
+
+
+# ---------------------------------------------------------------------------
+# ProInsights Sales product page (/sales/)
+# ---------------------------------------------------------------------------
+
+def build_sales_page():
+    """Render sales/index.html from _content/sales_page.html.
+
+    The source file carries <!--NAV--> and <!--FOOTER--> markers so the page
+    always shares the same header and footer as every generated page.
+    """
+    src = CONTENT_DIR / "sales_page.html"
+    if not src.exists():
+        print("  (no _content/sales_page.html, skipping /sales/)")
+        return False
+    html = src.read_text(encoding="utf-8")
+    assert "<!--NAV-->" in html and "<!--FOOTER-->" in html, "sales_page.html lost its NAV/FOOTER markers"
+    html = html.replace("<!--NAV-->", NAV_HTML.strip("\n")).replace("<!--FOOTER-->", FOOTER_HTML.strip("\n"))
+    out_path = BASE_DIR / "sales" / "index.html"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(html, encoding="utf-8")
+    print(f"  wrote sales/index.html ({len(html):,} bytes)")
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -723,6 +751,9 @@ def main():
         blog_idx_html = render_blog_index(blog)
         (BASE_DIR / "blog" / "index.html").write_text(blog_idx_html, encoding="utf-8")
         print(f"  wrote blog/index.html ({len(blog_idx_html):,} bytes)")
+
+    # --- ProInsights Sales page ----------------------------------------------
+    build_sales_page()
 
     # --- Sitemap + robots ----------------------------------------------------
     write_sitemap(commercial_slugs, blog_slugs, cyprus_slugs, BASE_DIR / "sitemap.xml")

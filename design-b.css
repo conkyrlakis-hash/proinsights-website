@@ -1606,3 +1606,63 @@ a { color: inherit; text-decoration: none; }
   .hero.hero-small { padding: 40px 0 30px; }
 }
 
+
+/* ──────────────────────────────────────────────────────────────────────
+   Log-in menu — two products, one button (30/10/2026)
+   Reuses the .nav-dropdown behaviour (hover, focus, tap) and sits in the
+   right-hand group of the header, so it must keep working at phone width,
+   where the ordinary dropdown turns into an inline list inside the burger.
+   ────────────────────────────────────────────────────────────────────── */
+.nav-dropdown.nav-login-dd { flex: 0 0 auto; }
+.nav-dropdown.nav-login-dd .nav-drop-trigger {
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: none;
+  border: 1px solid rgba(0,0,0,0.22);
+  border-radius: 4px;
+  padding: 8px 15px;
+  min-height: 36px;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s;
+}
+.nav-dropdown.nav-login-dd .nav-drop-trigger:hover,
+.nav-dropdown.nav-login-dd .nav-drop-trigger:focus-visible { border-color: var(--ink); color: var(--blue); }
+.nav-dropdown.nav-login-dd .nav-drop-menu {
+  left: auto;
+  right: 0;
+  width: 290px;
+  transform: translateY(-4px);
+}
+.nav-dropdown.nav-login-dd:hover .nav-drop-menu,
+.nav-dropdown.nav-login-dd:focus-within .nav-drop-menu,
+.nav-dropdown.nav-login-dd.open .nav-drop-menu { transform: translateY(0); }
+.nav-dropdown.nav-login-dd .nav-drop-menu a { padding: 12px 14px; min-height: 44px; }
+@media (max-width: 900px) {
+  .nav-dropdown.nav-login-dd { width: auto; margin-left: auto; }
+  .nav-dropdown.nav-login-dd .nav-drop-trigger { width: auto; padding: 8px 14px; min-height: 44px; }
+  .nav-dropdown.nav-login-dd .nav-drop-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: auto;
+    width: min(290px, calc(100vw - 2 * var(--pad)));
+    background: var(--white);
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 32px rgba(11,10,14,0.12);
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    display: flex;
+  }
+  .nav-dropdown.nav-login-dd.open .nav-drop-menu,
+  .nav-dropdown.nav-login-dd:focus-within .nav-drop-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .nav-dropdown.nav-login-dd .nav-drop-menu a { padding: 12px 14px; }
+}

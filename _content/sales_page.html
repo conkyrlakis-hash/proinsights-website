@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ProInsights Sales | Field sales and sales analytics for distributors</title>
+<meta name="description" content="Field sales on the handheld and sales analytics from your ERP exports. Use either one, or both. Routes, visits, offers, receipts, customer cards and reports. Built in Cyprus.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://proinsights.com.cy/sales/">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png">
+<meta property="og:title" content="ProInsights Sales | Field sales and sales analytics for distributors">
+<meta property="og:description" content="Field sales on the handheld and sales analytics from your ERP exports. Use either one, or both. Routes, visits, offers, receipts, customer cards and reports. Built in Cyprus.">
+<meta property="og:url" content="https://proinsights.com.cy/sales/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png">
+<meta property="og:site_name" content="ProInsights">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ProInsights Sales | Field sales and sales analytics for distributors">
+<meta name="twitter:description" content="Field sales on the handheld and sales analytics from your ERP exports. Use either one, or both. Routes, visits, offers, receipts, customer cards and reports. Built in Cyprus.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/design-b.css">
+<link rel="stylesheet" href="/sales/sales.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "ProInsights",
+      "url": "https://proinsights.com.cy/",
+      "logo": "https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@proinsights.com.cy",
+        "contactType": "Sales",
+        "availableLanguage": [
+          "English",
+          "Greek"
+        ]
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "ProInsights Sales",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, Android",
+      "description": "Field sales and sales analytics for distributors. Field side: day routes, GPS-checked visits, offers with approval, receipts and shelf checks on the handheld. Analytics side: sales, customers, products, salespeople, targets and reports built from your ERP exports. Use either side, or both.",
+      "url": "https://proinsights.com.cy/sales/",
+      "inLanguage": [
+        "en",
+        "el"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "ProInsights",
+        "url": "https://proinsights.com.cy/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can we buy only the field system, or only the analytics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can take the field sales system for your team, the sales analytics for your ERP sales history, or both. The analytics need only your imported files: no handhelds and no recorded visits. The customer cards, the Overview, Customers, Products and Salespeople screens and the reports all work from the import."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ProInsights Sales replace our order system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It works next to the order system you already use, and orders are still entered there. In ProInsights Sales the salesperson records the outcome of each visit: order taken, no order, closed or other work. The sales that follow show up in your numbers when you import your next ERP export."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it change prices or documents in our ERP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Never. A special price is an offer that your approvers decide inside ProInsights Sales. The reference is the customer's last invoiced net unit price, and nothing is written back to your ERP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you track my salespeople all day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Salespeople are not tracked, and there is no trail of where they have been. Location is read only when a salesperson taps arrival or departure on an open day, and only after they have acknowledged the GPS notice. For each visit the app keeps the distance band (at the shop, near, far or unknown), the distance in metres, the GPS accuracy and a status code. It does not keep the salesperson's coordinates. The one exception is the shop's pin: it is saved once, on a shop's first visit, when the salesperson confirms 'I am at the shop', and the log records who set it and when. A weak signal counts as unknown, never as far."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does our sales data get in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Export customers, products, salespeople, sales documents and targets from your ERP as Excel or CSV and load them with the mapping wizard. Rows that cannot be accepted are listed before anything is sent, with a CSV of the refused rows to fix. The screens show the date of your latest data, so you always know how fresh the numbers are. It is a file import, not a live link to your ERP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which devices does it run on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Salespeople work on a phone or an Android handheld. Receipts print on a 58 mm roll from the Sunmi handheld through Chrome. The office works in a web browser on a computer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the receipt a tax document?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is a receipt for money collected. It carries your company's own name and logo and a signature line, and it states in Greek that it is not a tax document. ProInsights Sales records the payment; it does not process card payments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who can see what?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are four roles: owner, office, salesperson and viewer. Owner, office and viewer read all customers, and only owner and office import data. A salesperson sees only their own customers, on the phone. The analytics screens are for owner, office and viewer. The database enforces the roles, so a hidden button is not the only barrier."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We quote after a short demo, once we know the size of your team. Email info@proinsights.com.cy to start."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://proinsights.com.cy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ProInsights Sales",
+          "item": "https://proinsights.com.cy/sales/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="sales-page">
+<!--NAV-->
+<nav class="breadcrumb" aria-label="Breadcrumb"><div class="breadcrumb-inner"><a href="/">Home</a> <span class="crumb-sep">›</span> <span aria-current="page" translate="no">ProInsights Sales</span></div></nav>
+<main class="page">
+
+<section class="sx-hero">
+  <div class="sx-hero-inner">
+    <div class="sx-hero-text">
+      <p class="kicker" translate="no">ProInsights Sales</p>
+      <h1>Know your sales. Run your field team.</h1>
+      <p class="sx-lead"><span translate="no">ProInsights Sales</span> has two sides, and you can take either one or both. The field side gives each salesperson a day route, offers, receipts and shelf checks on a handheld. The analytics side turns your ERP sales exports into clear numbers at the office. It works next to the order system you already use.</p>
+      <div class="sx-cta-row">
+        <a href="mailto:info@proinsights.com.cy?subject=ProInsights%20Sales%20demo%20request&body=Hi%2C%20I%27d%20like%20to%20see%20a%20demo%20of%20ProInsights%20Sales.%0A%0ACompany%3A%20%0AInterested%20in%20(field%20sales%2C%20sales%20analytics%20or%20both)%3A%20%0ANumber%20of%20salespeople%3A%20%0AMy%20phone%3A%20%0ABest%20time%20to%20call%3A%20" class="btn-dark">Book a demo</a>
+        <a href="#ways" class="sx-btn-ghost">See the two ways to use it</a>
+      </div>
+      <ul class="sx-hero-points">
+        <li>Sales analytics built from your own ERP exports, with no field team needed</li>
+        <li>Day routes and visits with location checks that respect privacy</li>
+        <li>Special prices that go to the approvers you choose</li>
+      </ul>
+    </div>
+    <figure class="sx-visual">
+      <div class="sx-window" aria-hidden="true">
+        <div class="sx-window-bar"><i class="sx-dot"></i><i class="sx-dot"></i><i class="sx-dot"></i><span class="sx-window-title">Overview</span><span class="sx-seg"><b>Year to date</b><em>Last 12 months</em></span></div>
+        <div class="sx-window-body">
+          <div class="sx-tiles"><div class="sx-tile"><span class="lbl">Net sales</span><span class="val">€412,380</span><span class="delta sx-up">+6.4% vs last year</span></div><div class="sx-tile"><span class="lbl">This month so far</span><span class="val">€38,950</span><span class="delta sx-down">−2.1% vs last year</span></div><div class="sx-tile"><span class="lbl">Customers won and lost</span><span class="val">+14 / −9</span><span class="delta">vs the same dates last year</span></div><div class="sx-tile"><span class="lbl">Customers running late</span><span class="val">11</span><span class="delta">worth a call today</span></div></div>
+          <div class="sx-box flat"><div class="sx-legend"><span><i class="sx-key bar"></i>This year</span><span><i class="sx-key line"></i>Same month last year</span></div><svg viewBox="0 0 460 148" width="100%" role="img" aria-label="Sample chart of monthly net sales" focusable="false"><line x1="8" y1="120.5" x2="452" y2="120.5" stroke="#cfd7e6" stroke-width="1"/><rect x="14" y="68" width="22" height="52" rx="3" fill="#1d6cf2"/><rect x="48" y="62" width="22" height="58" rx="3" fill="#1d6cf2"/><rect x="82" y="70" width="22" height="50" rx="3" fill="#1d6cf2"/><rect x="116" y="56" width="22" height="64" rx="3" fill="#1d6cf2"/><rect x="150" y="50" width="22" height="70" rx="3" fill="#1d6cf2"/><rect x="184" y="54" width="22" height="66" rx="3" fill="#1d6cf2"/><rect x="218" y="46" width="22" height="74" rx="3" fill="#1d6cf2"/><rect x="252" y="40" width="22" height="80" rx="3" fill="#1d6cf2"/><rect x="286" y="48" width="22" height="72" rx="3" fill="#1d6cf2"/><rect x="320" y="36" width="22" height="84" rx="3" fill="#1d6cf2"/><rect x="354" y="42" width="22" height="78" rx="3" fill="#1d6cf2"/><rect x="388" y="32" width="22" height="88" rx="3" fill="#1d6cf2"/><rect x="422" y="64" width="22" height="56" rx="3" fill="#1d6cf2"/><polyline points="25,74 59,70 93,72 127,64 161,60 195,58 229,56 263,50 297,52 331,48 365,46 399,42 433,50" fill="none" stroke="#45434b" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round"/><text x="14" y="140" font-size="11" fill="#5a6272" font-family="Inter,sans-serif">Oct 2025</text><text x="444" y="140" font-size="11" fill="#5a6272" text-anchor="end" font-family="Inter,sans-serif">Oct 2026</text></svg></div>
+        </div>
+      </div>
+      <div class="sx-phone" aria-hidden="true"><div class="sx-phone-screen">
+<div class="sx-ph-head"><h4>Today's route</h4><p>2 of 8 shops done</p><div class="sx-ph-bar"><i style="width:25%"></i></div></div>
+<div class="sx-stop"><div><b>Supermarket</b><small>Visited 08:40</small></div><span class="sx-chip done">Done</span></div>
+<div class="sx-stop"><div><b>Neighbourhood mini market</b><small>Visited 09:25</small></div><span class="sx-chip done">Done</span></div>
+<div class="sx-stop now"><div><b>Kiosk</b><small>Arrived 10:05</small></div><span class="sx-chip now">In progress</span></div>
+<div class="sx-stop"><div><b>Café</b><small>Next shop</small></div><span class="sx-chip todo">To do</span></div>
+<div class="sx-ph-actions"><span class="sx-ph-btn primary">Directions</span></div>
+</div></div>
+      <figcaption class="sx-cap">Illustrative screens with sample data.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sx-facts" aria-label="At a glance">
+  <ul class="sx-facts-inner">
+    <li><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></span><span>Phone, handheld and web</span></li>
+    <li><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span>English and Greek</span></li>
+    <li><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3v12"/><path d="m7 8 5-5 5 5"/><path d="M5 21h14"/></svg></span><span>Imports your Excel and CSV exports</span></li>
+    <li><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><span>Roles enforced in the database</span></li>
+  </ul>
+</section>
+
+<section class="sx-band sx-blue" id="ways">
+  <div class="sx-wrap">
+    <div class="sx-head">
+      <p class="section-tag">Two ways to use it</p>
+      <h2 class="h-big">Take the part you need, or both.</h2>
+      <p class="sx-sub">The field side and the analytics side share the same imports and the same roles, and a company can use one without the other.</p>
+    </div>
+    <div class="sx-grid sx-ways">
+      <div class="sx-card">
+        <span class="sx-for">For the field team</span>
+        <h3>Field sales</h3>
+        <p>For companies with salespeople on the road. Each person works from a handheld or a phone.</p>
+        <ul class="sx-ticks">
+          <li>A day route, with every visit recorded as order taken, no order, closed or other work.</li>
+          <li>Special prices that go to the approvers you choose.</li>
+          <li>Receipts printed on a 58 mm roll, and shelf checks with before and after photos.</li>
+        </ul>
+        <a class="sx-more" href="#day">See a salesperson's day</a>
+      </div>
+      <div class="sx-card">
+        <span class="sx-for">For the office</span>
+        <h3>Sales analytics</h3>
+        <p>For companies that want to understand their ERP sales history. It works on your imported files alone: no handhelds and no visits needed.</p>
+        <ul class="sx-ticks">
+          <li>An overview of sales against last year, and why they moved.</li>
+          <li>Customers growing, declining, new or stopped, with a card for each customer.</li>
+          <li>Products, salespeople, targets and eight ready-made reports.</li>
+        </ul>
+        <a class="sx-more" href="#office">See the analytics</a>
+      </div>
+      <div class="sx-card sx-both">
+        <span class="sx-for">Both together</span>
+        <h3>Field sales and analytics</h3>
+        <p>For companies that want the round and the results in one system.</p>
+        <ul class="sx-ticks">
+          <li>The same customers, products and roles on both sides.</li>
+          <li>A 07:00 e-mail to managers, in Greek, with visits, collections and the month against target.</li>
+          <li>Everything listed in the other two columns.</li>
+        </ul>
+        <a class="sx-more" href="mailto:info@proinsights.com.cy?subject=ProInsights%20Sales%20demo%20request&body=Hi%2C%20I%27d%20like%20to%20see%20a%20demo%20of%20ProInsights%20Sales.%0A%0ACompany%3A%20%0AInterested%20in%20(field%20sales%2C%20sales%20analytics%20or%20both)%3A%20%0ANumber%20of%20salespeople%3A%20%0AMy%20phone%3A%20%0ABest%20time%20to%20call%3A%20">Ask for a demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sx-band" id="day">
+  <div class="sx-wrap">
+    <div class="sx-head">
+      <p class="section-tag">Field sales: a salesperson's day</p>
+      <h2 class="h-big">One handheld for the whole round.</h2>
+      <p class="sx-sub">The salesperson starts the day with a personal code and works through the route. Everything they do is tied to the shop they are standing in.</p>
+    </div>
+  </div>
+  <div class="sx-row">
+    <div class="sx-row-text">
+      <h3>A route that shows what is done, what is next and what was missed</h3>
+      <p>The day route lists every shop as done, in progress or to do, and opens directions to the next one in Google Maps. A week plan and a list of missed shops keep the round honest.</p>
+      <ul class="sx-ticks">
+        <li>Four visit outcomes: order taken, no order, closed or other work, plus a note of up to 300 characters.</li>
+        <li>Salespeople are not tracked. Location is read only when the salesperson taps arrival or departure. Each visit keeps the distance band, the distance in metres, the GPS accuracy and a status code, never the salesperson's coordinates. The one exception is the shop's pin, saved once on its first visit when they confirm 'I am at the shop'.</li>
+        <li>Directions go to the shop's pin. The salesperson's position is never put in a link.</li>
+        <li>The shop radius is yours to set, from 25 m to 1,000 m.</li>
+      </ul>
+    </div>
+    <div class="sx-stage">
+      <figure>
+        <div class="sx-phone big" aria-hidden="true"><div class="sx-phone-screen">
+<div class="sx-ph-head"><h4>Kiosk</h4><p>Visit in progress</p></div>
+<div class="sx-ph-body">
+<div class="sx-ph-row"><span class="sx-ph-lbl">Arrival check</span><span class="sx-chip done">At the shop</span></div>
+<span class="sx-ph-lbl">Outcome of the visit</span>
+<div class="sx-opts"><span class="sx-opt on">Order taken</span><span class="sx-opt">No order</span><span class="sx-opt">Closed</span><span class="sx-opt">Other work</span></div>
+<span class="sx-ph-lbl">Note</span>
+<div class="sx-note">Asked for the new range. Call back Friday.<em>41 / 300</em></div>
+</div>
+<div class="sx-ph-actions"><span class="sx-ph-btn primary">Leave the shop</span></div>
+</div></div>
+        <figcaption class="sx-cap">Illustrative screen with sample data.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sx-band sx-blue" id="offers">
+  <div class="sx-row reverse">
+    <div class="sx-row-text">
+      <h3>Special prices, approved by the right person</h3>
+      <p>A salesperson proposes a special price on the handheld and confirms it with a personal code. If it is within the level you approve automatically, it goes through at once. If not, it goes to the approvers on your route.</p>
+      <ul class="sx-ticks">
+        <li>You choose who approves discounts and each person's limit. Above a level you set, only your final approver can decide, with a warning shown.</li>
+        <li>Your approvers decide in a Sign-off queue, with their own personal code.</li>
+        <li>Nobody approves their own offer, and offers expire.</li>
+        <li><span translate="no">ProInsights Sales</span> never changes a price in your ERP. The offer lives here, and your order system stays the master.</li>
+      </ul>
+    </div>
+    <div class="sx-stage on-blue">
+      <figure>
+        <div class="sx-panel sx-flow" aria-hidden="true">
+<div class="sx-step"><span class="sx-num">1</span><div><b>Salesperson proposes a price</b><small>Reference: the customer's last invoiced net unit price. Confirmed with a personal code.</small></div></div>
+<div class="sx-branch">
+<div class="sx-bcard ok"><span class="sx-chip done">Inside the automatic limit</span><b>Approved at once</b></div>
+<div class="sx-bcard wait"><span class="sx-chip warn">Above the limit</span><b>Waits in the Sign-off queue</b></div>
+</div>
+<div class="sx-step"><span class="sx-num">2</span><div><b>Your approvers decide</b><small>With their own personal code. Nobody approves their own offer.</small></div></div>
+<div class="sx-step"><span class="sx-num">3</span><div><b>The answer lands in the salesperson's inbox</b><small>Offers expire, so an old price cannot be used by mistake.</small></div></div>
+</div>
+        <figcaption class="sx-cap">How an offer is approved.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sx-band" id="collect">
+  <div class="sx-row">
+    <div class="sx-row-text">
+      <h3>Money received, with a printed receipt in the customer's hand</h3>
+      <p>When a customer pays on the spot, the salesperson records it on the handheld and prints a numbered receipt on a 58 mm roll. The receipt carries your own name and logo.</p>
+      <ul class="sx-ticks">
+        <li>Record cash, cheque, card or transfer. A cheque needs its number and bank.</li>
+        <li>A hard maximum amount per receipt, agreed when your account is set up.</li>
+        <li>Every receipt is numbered. A void needs a reason, so a receipt never just disappears.</li>
+        <li>It is a receipt for money collected, not a tax document, and it says so in Greek. It records a payment; it does not process cards.</li>
+      </ul>
+    </div>
+    <div class="sx-stage sx-stage-photo">
+      <figure>
+        <picture>
+          <source type="image/webp" srcset="/sales/sunmi-v3-mix-payment-screen.webp">
+          <img src="/sales/sunmi-v3-mix-payment-screen.png" width="1272" height="1212" loading="lazy" decoding="async" translate="no" alt="Sunmi V3 MIX handheld showing the ProInsights Sales payment screen">
+        </picture>
+        <figcaption class="sx-cap">Real app screen, sample data.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sx-band sx-blue">
+  <div class="sx-wrap">
+    <div class="sx-head">
+      <p class="section-tag">Field sales: also on the handheld</p>
+      <h2 class="h-big">The small things that decide a good round.</h2>
+    </div>
+    <div class="sx-grid">
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span><h3>Shelf checks with before and after photos</h3><p>Pick the issue: missing products, price missing or wrong, poor facing, expired or damaged, or competitor space. Both photos are required, and the office gets a list it can export.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><h3>Announcements that must be confirmed</h3><p>Write on the computer, with a photo or an offer, to everyone or to chosen salespeople. Ask for confirmation with a personal code, and see who has received, opened and confirmed it.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/></svg></span><h3>An optional salesperson brief at 07:00</h3><p>Off until you switch it on in Settings. When it is on, it goes each morning to the Sunmi POS handheld and nowhere else: shops that went quiet, products that stopped, the trend against last year and a product to suggest from similar shops. It names a person and shows their figures only when the handheld has clearly been theirs.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h3>The week, not just today</h3><p>See the week plan and the shops that were missed, so a skipped customer is noticed by the end of the week rather than at the end of the quarter.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h3>A personal code for every sign-off</h3><p>Salespeople start the day with a personal code and use it to confirm offers and announcements, so every action has one name on it.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><h3>English and Greek</h3><p>The whole app speaks both languages. Dates are day, month, year, and money is in euro.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sx-band" id="office">
+  <div class="sx-wrap">
+    <div class="sx-head">
+      <p class="section-tag">Sales analytics</p>
+      <h2 class="h-big">The numbers behind every sale.</h2>
+      <p class="sx-sub">Load your ERP exports and read sales, customers, products and salespeople on a few screens. You do not need a field team for this: the analytics work on your imported files alone. Every figure comes from your own data, and a figure the data cannot give is not guessed.</p>
+    </div>
+    <figure class="sx-bigfig">
+      <a class="sx-shot-link" href="/sales/bi-overview.png" target="_blank" rel="noopener">
+        <picture class="sx-pic">
+          <source type="image/webp" srcset="/sales/bi-overview.webp">
+          <img class="sx-shot" src="/sales/bi-overview.png" width="2000" height="1855" loading="lazy" decoding="async" translate="no" alt="The ProInsights Sales Overview screen: net sales, this month and this week against last year, customers won and lost, sales by month, year to date, why sales moved and a Needs attention list">
+        </picture>
+      </a>
+      <figcaption class="sx-cap">Real app screen with sample data: an invented company, not a customer's figures. Gross profit, unpaid invoices and open orders are shown empty: they need cost and invoice-status imports that are not built yet. <a href="/sales/bi-overview.png" target="_blank" rel="noopener">Open full size</a></figcaption>
+    </figure>
+    <div class="sx-grid sx-gap-top">
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 3v18h18"/><path d="M7 16v-5"/><path d="M12 16V8"/><path d="M17 16v-9"/></svg></span><h3>Overview</h3><p>Net sales, this month and this week against last year, customers won and lost, and customers running late. Under them: sales by month, the year to date, why sales moved, a rolling twelve months and how much rides on your ten biggest customers. Pick the period and what to compare with, and click any bar, row or tile to open what is behind it.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Customers</h3><p>See who is growing, declining, new, returning or stopped, how much you depend on your largest customers, and the 25 biggest in full.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><h3>Targets</h3><p>Twelve months by company and by salesperson, with pace shown in colour and grade against a pro-rata target and the actual net sales in every cell.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span><h3>Customers to call</h3><p>A customer is flagged when they are late against their own ordering rhythm, with the days since the last invoice, before they are lost.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><h3>Reports</h3><p>Build your own, pivot-style, even on a phone. Or use eight ready-made A4 reports: monthly and year-to-date reviews, salesperson scorecard, targets, customers needing attention, top customers, customer review and product performance. Each comes as PDF, Excel and CSV.</p></div>
+      <div class="sx-card"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span><h3>Salespeople and products</h3><p>Compare salespeople side by side, see which products sell and which do not, and open any customer for the full card.</p></div>
+    </div>
+  </div>
+  <div class="sx-row sx-bi-gap">
+    <div class="sx-row-text">
+      <h3>Open any customer before you call</h3>
+      <p>Click a customer anywhere in the analytics and a card opens with the story of that account, built from your imported files.</p>
+      <ul class="sx-ticks">
+        <li>The last invoice and last order, the usual ordering rhythm and when the next order was expected.</li>
+        <li>Sales this year against last year, and sales month by month.</li>
+        <li>Top products, products the customer stopped buying, and regular products that are now late.</li>
+        <li>Contact details and the salesperson, from your customer file.</li>
+      </ul>
+    </div>
+    <div class="sx-stage">
+      <figure>
+        <a class="sx-shot-link sx-shot-card" href="/sales/bi-customer-card.png" target="_blank" rel="noopener">
+          <picture class="sx-pic">
+            <source type="image/webp" srcset="/sales/bi-customer-card.webp">
+            <img class="sx-shot" src="/sales/bi-customer-card.png" width="956" height="2815" loading="lazy" decoding="async" translate="no" alt="A ProInsights Sales customer card: last invoice, usual rhythm, sales this year against last year, sales by month, top products, products stopped and regular products now late">
+          </picture>
+        </a>
+        <figcaption class="sx-cap">Real app screen with sample data: an invented customer. Margin, unpaid invoices and open orders are empty until cost and invoice-status imports are built. <a href="/sales/bi-customer-card.png" target="_blank" rel="noopener">Open full size</a></figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="sx-wrap sx-bi-more">
+    <div class="sx-head">
+      <h3>See what sells and what has stopped</h3>
+      <p class="sx-sub">Products sold, new products, how much rides on your top ten, products that stopped selling and the average discount given. Under them, sales by product group with the change against last year. Open a group to see its products.</p>
+    </div>
+    <figure class="sx-bigfig">
+      <a class="sx-shot-link" href="/sales/bi-products.png" target="_blank" rel="noopener">
+        <picture class="sx-pic">
+          <source type="image/webp" srcset="/sales/bi-products.webp">
+          <img class="sx-shot" src="/sales/bi-products.png" width="2000" height="1193" loading="lazy" decoding="async" translate="no" alt="The ProInsights Sales Products screen: products sold, new products, top ten share, products stopped selling, average discount, top products and sales by product group against last year">
+        </picture>
+      </a>
+      <figcaption class="sx-cap">Real app screen with sample data: an invented company, not a customer's figures. Margin by group comes with a cost import that is not built yet. <a href="/sales/bi-products.png" target="_blank" rel="noopener">Open full size</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sx-band sx-ink" id="control">
+  <div class="sx-wrap">
+    <div class="sx-head center">
+      <p class="section-tag light">Control and privacy</p>
+      <h2 class="h-big">You stay in charge of prices, people and data.</h2>
+      <p class="sx-sub">Rules that matter are enforced by the system, not left to good habits.</p>
+    </div>
+    <div class="sx-grid four">
+      <div class="sx-card dark"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Roles the database enforces</h3><p>Owner, office, salesperson and viewer. A salesperson sees only their own customers. Import is for owner and office, settings are for the owner, and someone without a role sees nothing. The analytics screens are for owner, office and viewer.</p></div>
+      <div class="sx-card dark"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".6" fill="currentColor"/></svg></span><h3>Approvals nobody can skip</h3><p>Nobody approves their own offer. Offers expire. You choose who approves discounts and each person's limit. Above a level you set, only your final approver can decide, with a warning shown.</p></div>
+      <div class="sx-card dark"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><h3>Location, with respect</h3><p>Salespeople are not tracked. Location is read only when a salesperson taps arrival or departure, after they acknowledge the GPS notice. Each visit keeps a distance band, the distance in metres, the GPS accuracy and a status code, never their coordinates. The one exception is the shop's pin, saved once on a shop's first visit when they confirm 'I am at the shop'; the log records who set it and when. A weak signal means unknown, not far.</p></div>
+      <div class="sx-card dark"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></span><h3>Your ERP stays the master</h3><p>It never changes a price or a document in your ERP. It reads your exports and keeps its own record of visits, offers and receipts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sx-band sx-blue" id="fit">
+  <div class="sx-wrap">
+    <div class="sx-head">
+      <p class="section-tag">How it fits</p>
+      <h2 class="h-big">Works with the system you already have.</h2>
+      <p class="sx-sub">No rebuild of your order process. You keep your ERP and send us files.</p>
+    </div>
+    <ol class="sx-steps">
+      <li><span class="sx-num">1</span><h3>Export from your ERP</h3><p>Customers, products, salespeople, sales documents and targets, as Excel or CSV.</p></li>
+      <li><span class="sx-num">2</span><h3>Map and import</h3><p>A mapping wizard lists any refused rows before anything is sent, and gives you a CSV of them to fix.</p></li>
+      <li><span class="sx-num">3</span><h3>Read the numbers, and run the day</h3><p>Analytics at the office, with the date of your latest data on screen. If you also use the field side: routes, offers and receipts on the handheld.</p></li>
+    </ol>
+    <p class="sx-callout"><b>Honest about the data.</b> The numbers are as of your last import. This is a file import, not a live link to your ERP, and nothing is written back to it. Gross profit, unpaid invoices and open orders are not in the analytics today: they need a cost file and an invoice-status file, and those imports are not built yet.</p>
+  </div>
+</section>
+
+<section class="sx-band" id="faq">
+  <div class="band-narrow">
+    <p class="section-tag">Frequently asked</p>
+    <h2 class="h-big">Questions, answered.</h2>
+    <div class="faq-list">
+<details class="faq-item"><summary>Can we buy only the field system, or only the analytics?</summary><div class="faq-answer"><p>Yes. You can take the field sales system for your team, the sales analytics for your ERP sales history, or both. The analytics need only your imported files: no handhelds and no recorded visits. The customer cards, the Overview, Customers, Products and Salespeople screens and the reports all work from the import.</p></div></details>
+<details class="faq-item"><summary><span>Does <span translate="no">ProInsights Sales</span> replace our order system?</span></summary><div class="faq-answer"><p>No. It works next to the order system you already use, and orders are still entered there. In <span translate="no">ProInsights Sales</span> the salesperson records the outcome of each visit: order taken, no order, closed or other work. The sales that follow show up in your numbers when you import your next ERP export.</p></div></details>
+<details class="faq-item"><summary>Does it change prices or documents in our ERP?</summary><div class="faq-answer"><p>Never. A special price is an offer that your approvers decide inside <span translate="no">ProInsights Sales</span>. The reference is the customer's last invoiced net unit price, and nothing is written back to your ERP.</p></div></details>
+<details class="faq-item"><summary>Do you track my salespeople all day?</summary><div class="faq-answer"><p>No. Salespeople are not tracked, and there is no trail of where they have been. Location is read only when a salesperson taps arrival or departure on an open day, and only after they have acknowledged the GPS notice. For each visit the app keeps the distance band (at the shop, near, far or unknown), the distance in metres, the GPS accuracy and a status code. It does not keep the salesperson's coordinates. The one exception is the shop's pin: it is saved once, on a shop's first visit, when the salesperson confirms 'I am at the shop', and the log records who set it and when. A weak signal counts as unknown, never as far.</p></div></details>
+<details class="faq-item"><summary>How does our sales data get in?</summary><div class="faq-answer"><p>Export customers, products, salespeople, sales documents and targets from your ERP as Excel or CSV and load them with the mapping wizard. Rows that cannot be accepted are listed before anything is sent, with a CSV of the refused rows to fix. The screens show the date of your latest data, so you always know how fresh the numbers are. It is a file import, not a live link to your ERP.</p></div></details>
+<details class="faq-item"><summary>Which devices does it run on?</summary><div class="faq-answer"><p>Salespeople work on a phone or an Android handheld. Receipts print on a 58 mm roll from the Sunmi handheld through Chrome. The office works in a web browser on a computer.</p></div></details>
+<details class="faq-item"><summary>Is the receipt a tax document?</summary><div class="faq-answer"><p>No. It is a receipt for money collected. It carries your company's own name and logo and a signature line, and it states in Greek that it is not a tax document. <span translate="no">ProInsights Sales</span> records the payment; it does not process card payments.</p></div></details>
+<details class="faq-item"><summary>Who can see what?</summary><div class="faq-answer"><p>There are four roles: owner, office, salesperson and viewer. Owner, office and viewer read all customers, and only owner and office import data. A salesperson sees only their own customers, on the phone. The analytics screens are for owner, office and viewer. The database enforces the roles, so a hidden button is not the only barrier.</p></div></details>
+<details class="faq-item"><summary>How much does it cost?</summary><div class="faq-answer"><p>We quote after a short demo, once we know the size of your team. Email info@proinsights.com.cy to start.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="band band-ink sx-cta">
+  <div class="band-inner center">
+    <h2 class="h-big">See the field side, the analytics, or both.</h2>
+    <p class="band-lead light">We will walk you through the part you need: the route, an offer approval and a receipt on the field side, and the Overview, a customer card and the reports on the analytics side. We also answer questions about your own set-up.</p>
+    <a href="mailto:info@proinsights.com.cy?subject=ProInsights%20Sales%20demo%20request&body=Hi%2C%20I%27d%20like%20to%20see%20a%20demo%20of%20ProInsights%20Sales.%0A%0ACompany%3A%20%0AInterested%20in%20(field%20sales%2C%20sales%20analytics%20or%20both)%3A%20%0ANumber%20of%20salespeople%3A%20%0AMy%20phone%3A%20%0ABest%20time%20to%20call%3A%20" class="btn-light">Book a demo</a>
+    <p class="sx-cta-note">Or write to <a href="mailto:info@proinsights.com.cy">info@proinsights.com.cy</a></p>
+  </div>
+</section>
+
+</main>
+<!--FOOTER-->
+</body>
+</html>
