@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ProInsights Sales | Field sales and sales analytics for distributors</title>
-<meta name="description" content="Field sales on the handheld and sales analytics from your ERP exports. Use either one, or both. Routes, visits, offers, receipts, customer cards and reports. Built in Cyprus.">
+<meta name="description" content="Field sales on the handheld and sales analytics from your ERP, linked to its API or loaded from files. Use either one, or both. Routes, visits, orders, offers, receipts, customer cards and reports. Built in Cyprus.">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://proinsights.com.cy/sales/">
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png">
 <meta property="og:title" content="ProInsights Sales | Field sales and sales analytics for distributors">
-<meta property="og:description" content="Field sales on the handheld and sales analytics from your ERP exports. Use either one, or both. Routes, visits, offers, receipts, customer cards and reports. Built in Cyprus.">
+<meta property="og:description" content="Field sales on the handheld and sales analytics from your ERP, linked to its API or loaded from files. Use either one, or both. Routes, visits, orders, offers, receipts, customer cards and reports. Built in Cyprus.">
 <meta property="og:url" content="https://proinsights.com.cy/sales/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png">
 <meta property="og:site_name" content="ProInsights">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ProInsights Sales | Field sales and sales analytics for distributors">
-<meta name="twitter:description" content="Field sales on the handheld and sales analytics from your ERP exports. Use either one, or both. Routes, visits, offers, receipts, customer cards and reports. Built in Cyprus.">
+<meta name="twitter:description" content="Field sales on the handheld and sales analytics from your ERP, linked to its API or loaded from files. Use either one, or both. Routes, visits, orders, offers, receipts, customer cards and reports. Built in Cyprus.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/conkyrlakis-hash/proinsights-brand-assets/main/proinsights-light-on-dark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@
       "name": "ProInsights Sales",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web, Android",
-      "description": "Field sales and sales analytics for distributors. Field side: day routes, GPS-checked visits, offers with approval, receipts and shelf checks on the handheld. Analytics side: sales, customers, products, salespeople, targets and reports built from your ERP exports. Use either side, or both.",
+      "description": "Field sales and sales analytics for distributors. Field side: day routes, GPS-checked visits, orders, offers with approval, receipts and shelf checks on the handheld. Analytics side: sales, customers, products, salespeople, targets and reports built from your ERP data, through a link to its API or from file exports. Use either side, or both.",
       "url": "https://proinsights.com.cy/sales/",
       "inLanguage": [
         "en",
@@ -67,7 +67,7 @@
           "name": "Can we buy only the field system, or only the analytics?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. You can take the field sales system for your team, the sales analytics for your ERP sales history, or both. The analytics need only your imported files: no handhelds and no recorded visits. The customer cards, the Overview, Customers, Products and Salespeople screens and the reports all work from the import."
+            "text": "Yes. You can take the field sales system for your team, the sales analytics for your ERP sales history, or both. The analytics need only your ERP data: no handhelds and no recorded visits. The customer cards, the Overview, Customers, Products and Salespeople screens and the reports all work from it."
           }
         },
         {
@@ -75,7 +75,7 @@
           "name": "Does ProInsights Sales replace our order system?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. It works next to the order system you already use, and orders are still entered there. In ProInsights Sales the salesperson records the outcome of each visit: order taken, no order, closed or other work. The sales that follow show up in your numbers when you import your next ERP export."
+            "text": "No. Your ERP stays your order system, and ProInsights Sales is where the order is taken. At the shop the salesperson opens the customer, starts from a suggested basket built from the customer's last three orders, checks the prices, which start at the customer's last invoiced net price, picks a delivery date and sends. The server prices the order again, gives it its own number and totals with VAT, and the office sees it at once. A price below the last invoice needs the salesperson's personal code and is logged. When we link to your ERP's API, the order goes into your ERP by itself, with no export and no import."
           }
         },
         {
@@ -83,7 +83,7 @@
           "name": "Does it change prices or documents in our ERP?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Never. A special price is an offer that your approvers decide inside ProInsights Sales. The reference is the customer's last invoiced net unit price, and nothing is written back to your ERP."
+            "text": "Prices, never. A special price is an offer that your approvers decide inside ProInsights Sales, against the customer's last invoiced net unit price. With an API link, the only thing sent to your ERP is the orders your salespeople take. Without one, nothing is written to your ERP and the office takes the orders out as a file."
           }
         },
         {
@@ -99,7 +99,7 @@
           "name": "How does our sales data get in?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Export customers, products, salespeople, sales documents and targets from your ERP as Excel or CSV and load them with the mapping wizard. Rows that cannot be accepted are listed before anything is sent, with a CSV of the refused rows to fix. The screens show the date of your latest data, so you always know how fresh the numbers are. It is a file import, not a live link to your ERP."
+            "text": "Through your ERP's API: we link to it, and customers, products, salespeople, sales documents and targets come in by themselves, so nobody exports or imports anything. If your ERP has no API, export the same data as Excel or CSV and load it with the mapping wizard. Rows that cannot be accepted are listed before anything is sent, with a CSV of the refused rows to fix. The screens show the date of your latest data, so you always know how fresh the numbers are."
           }
         },
         {
@@ -210,13 +210,14 @@
     <div class="sx-hero-text">
       <p class="kicker" translate="no">ProInsights Sales</p>
       <h1>Know your sales. Run your field team.</h1>
-      <p class="sx-lead"><span translate="no">ProInsights Sales</span> has two sides, and you can take either one or both. The field side gives each salesperson a day route, offers, receipts and shelf checks on a handheld. The analytics side turns your ERP sales exports into clear numbers at the office. It works next to the order system you already use.</p>
+      <p class="sx-lead"><span translate="no">ProInsights Sales</span> has two sides, and you can take either one or both. The field side gives each salesperson a day route, orders, offers, receipts and shelf checks on a handheld. The analytics side turns your ERP sales into clear numbers at the office. We link to your ERP's API, so nobody exports or imports files.</p>
       <div class="sx-cta-row">
         <a href="mailto:info@proinsights.com.cy?subject=ProInsights%20Sales%20demo%20request&body=Hi%2C%20I%27d%20like%20to%20see%20a%20demo%20of%20ProInsights%20Sales.%0A%0ACompany%3A%20%0AInterested%20in%20(field%20sales%2C%20sales%20analytics%20or%20both)%3A%20%0ANumber%20of%20salespeople%3A%20%0AMy%20phone%3A%20%0ABest%20time%20to%20call%3A%20" class="btn-dark">Book a demo</a>
         <a href="#ways" class="sx-btn-ghost">See the two ways to use it</a>
       </div>
       <ul class="sx-hero-points">
-        <li>Sales analytics built from your own ERP exports, with no field team needed</li>
+        <li>Orders taken at the shop and sent into your ERP through its API</li>
+        <li>Sales analytics built from your own ERP data, with no field team needed</li>
         <li>Day routes and visits with location checks that respect privacy</li>
         <li>Special prices that go to the approvers you choose</li>
       </ul>
@@ -246,7 +247,7 @@
   <ul class="sx-facts-inner">
     <li><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></span><span>Phone, handheld and web</span></li>
     <li><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span>English and Greek</span></li>
-    <li><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3v12"/><path d="m7 8 5-5 5 5"/><path d="M5 21h14"/></svg></span><span>Imports your Excel and CSV exports</span></li>
+    <li><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3v12"/><path d="m7 8 5-5 5 5"/><path d="M5 21h14"/></svg></span><span>Links to your ERP's API</span></li>
     <li><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><span>Roles enforced in the database</span></li>
   </ul>
 </section>
@@ -256,7 +257,7 @@
     <div class="sx-head">
       <p class="section-tag">Two ways to use it</p>
       <h2 class="h-big">Take the part you need, or both.</h2>
-      <p class="sx-sub">The field side and the analytics side share the same imports and the same roles, and a company can use one without the other.</p>
+      <p class="sx-sub">The field side and the analytics side share the same ERP data and the same roles, and a company can use one without the other.</p>
     </div>
     <div class="sx-grid sx-ways">
       <div class="sx-card">
@@ -264,7 +265,7 @@
         <h3>Field sales</h3>
         <p>For companies with salespeople on the road. Each person works from a handheld or a phone.</p>
         <ul class="sx-ticks">
-          <li>A day route, with every visit recorded as order taken, no order, closed or other work.</li>
+          <li>A day route, with the order taken at the shop and sent to the office at once.</li>
           <li>Special prices that go to the approvers you choose.</li>
           <li>Receipts printed on a 58 mm roll, and shelf checks with before and after photos.</li>
         </ul>
@@ -273,7 +274,7 @@
       <div class="sx-card">
         <span class="sx-for">For the office</span>
         <h3>Sales analytics</h3>
-        <p>For companies that want to understand their ERP sales history. It works on your imported files alone: no handhelds and no visits needed.</p>
+        <p>For companies that want to understand their ERP sales history. It works on your ERP data alone: no handhelds and no visits needed.</p>
         <ul class="sx-ticks">
           <li>An overview of sales against last year, and why they moved.</li>
           <li>Customers growing, declining, new or stopped, with a card for each customer.</li>
@@ -327,6 +328,36 @@
 <div class="sx-note">Asked for the new range. Call back Friday.<em>41 / 300</em></div>
 </div>
 <div class="sx-ph-actions"><span class="sx-ph-btn primary">Leave the shop</span></div>
+</div></div>
+        <figcaption class="sx-cap">Illustrative screen with sample data.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="sx-row reverse sx-bi-gap">
+    <div class="sx-row-text">
+      <h3>The order, taken at the shop</h3>
+      <p>The salesperson opens the customer and starts from a suggested basket: the usual quantities from the customer's last three orders. Each price starts at the customer's last invoiced net price. They adjust it, pick a delivery date and send.</p>
+      <ul class="sx-ticks">
+        <li>The server prices the order again, works out net, VAT and total, and gives it its own number, with no gaps for each salesperson and year.</li>
+        <li>A price below the customer's last invoice needs the salesperson's personal code, and it goes into a price log the office can read.</li>
+        <li>The office sees every order as soon as it is sent and marks it received.</li>
+        <li>Linked to your ERP's API, the order goes straight into your ERP: no export and no import. Without a link, the office takes the orders out as a file.</li>
+      </ul>
+    </div>
+    <div class="sx-stage">
+      <figure>
+        <div class="sx-phone big" aria-hidden="true"><div class="sx-phone-screen">
+<div class="sx-ph-head"><h4>Kiosk</h4><p>New order</p></div>
+<div class="sx-ph-body">
+<div class="sx-ph-row"><span class="sx-ph-lbl">Suggested basket</span><span class="sx-chip now">Last 3 orders</span></div>
+<div class="sx-line"><span>Water 0.5 L</span><small>24 &times; &euro;0.35</small></div>
+<div class="sx-line"><span>Crisps 150 g</span><small>12 &times; &euro;1.20</small></div>
+<div class="sx-line"><span>Chocolate bar</span><small>20 &times; &euro;0.95</small></div>
+<div class="sx-line"><span>Orange juice 1 L</span><small>8 &times; &euro;1.80</small></div>
+<div class="sx-ph-row"><span class="sx-ph-lbl">Delivery</span><span class="sx-chip todo">06/11/2026</span></div>
+<div class="sx-total"><span>Total with VAT 19%</span><span>&euro;66.88</span></div>
+</div>
+<div class="sx-ph-actions"><span class="sx-ph-btn primary">Send order</span></div>
 </div></div>
         <figcaption class="sx-cap">Illustrative screen with sample data.</figcaption>
       </figure>
@@ -409,7 +440,7 @@
     <div class="sx-head">
       <p class="section-tag">Sales analytics</p>
       <h2 class="h-big">The numbers behind every sale.</h2>
-      <p class="sx-sub">Load your ERP exports and read sales, customers, products and salespeople on a few screens. You do not need a field team for this: the analytics work on your imported files alone. Every figure comes from your own data, and a figure the data cannot give is not guessed.</p>
+      <p class="sx-sub">Link your ERP, or load its exports, and read sales, customers, products and salespeople on a few screens. You do not need a field team for this: the analytics work on your ERP data alone. Every figure comes from your own data, and a figure the data cannot give is not guessed.</p>
     </div>
     <figure class="sx-bigfig">
       <a class="sx-shot-link" href="/sales/bi-overview.png" target="_blank" rel="noopener">
@@ -432,7 +463,7 @@
   <div class="sx-row sx-bi-gap">
     <div class="sx-row-text">
       <h3>Open any customer before you call</h3>
-      <p>Click a customer anywhere in the analytics and a card opens with the story of that account, built from your imported files.</p>
+      <p>Click a customer anywhere in the analytics and a card opens with the story of that account, built from your ERP data.</p>
       <ul class="sx-ticks">
         <li>The last invoice and last order, the usual ordering rhythm and when the next order was expected.</li>
         <li>Sales this year against last year, and sales month by month.</li>
@@ -480,7 +511,7 @@
       <div class="sx-card dark"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Roles the database enforces</h3><p>Owner, office, salesperson and viewer. A salesperson sees only their own customers. Import is for owner and office, settings are for the owner, and someone without a role sees nothing. The analytics screens are for owner, office and viewer.</p></div>
       <div class="sx-card dark"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".6" fill="currentColor"/></svg></span><h3>Approvals nobody can skip</h3><p>Nobody approves their own offer. Offers expire. You choose who approves discounts and each person's limit. Above a level you set, only your final approver can decide, with a warning shown.</p></div>
       <div class="sx-card dark"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><h3>Location, with respect</h3><p>Salespeople are not tracked. Location is read only when a salesperson taps arrival or departure, after they acknowledge the GPS notice. Each visit keeps a distance band, the distance in metres, the GPS accuracy and a status code, never their coordinates. The one exception is the shop's pin, saved once on a shop's first visit when they confirm 'I am at the shop'; the log records who set it and when. A weak signal means unknown, not far.</p></div>
-      <div class="sx-card dark"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></span><h3>Your ERP stays the master</h3><p>It never changes a price or a document in your ERP. It reads your exports and keeps its own record of visits, offers and receipts.</p></div>
+      <div class="sx-card dark"><span class="sx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></span><h3>Your ERP stays the master</h3><p>It never changes a price in your ERP. It reads your ERP data through its API or from your exports, and keeps its own record of visits, offers and receipts. With an API link, the only thing it sends your ERP is the orders your salespeople take.</p></div>
     </div>
   </div>
 </section>
@@ -490,14 +521,14 @@
     <div class="sx-head">
       <p class="section-tag">How it fits</p>
       <h2 class="h-big">Works with the system you already have.</h2>
-      <p class="sx-sub">No rebuild of your order process. You keep your ERP and send us files.</p>
+      <p class="sx-sub">No rebuild of your order process. You keep your ERP, and we link to it.</p>
     </div>
     <ol class="sx-steps">
-      <li><span class="sx-num">1</span><h3>Export from your ERP</h3><p>Customers, products, salespeople, sales documents and targets, as Excel or CSV.</p></li>
-      <li><span class="sx-num">2</span><h3>Map and import</h3><p>A mapping wizard lists any refused rows before anything is sent, and gives you a CSV of them to fix.</p></li>
-      <li><span class="sx-num">3</span><h3>Read the numbers, and run the day</h3><p>Analytics at the office, with the date of your latest data on screen. If you also use the field side: routes, offers and receipts on the handheld.</p></li>
+      <li><span class="sx-num">1</span><h3>Link your ERP</h3><p>We connect to your ERP's API, so customers, products, salespeople, sales documents and targets come in by themselves. No API? Export them as Excel or CSV.</p></li>
+      <li><span class="sx-num">2</span><h3>Map once</h3><p>We match your fields once. On a file import, the wizard lists any refused rows before anything is sent, and gives you a CSV of them to fix.</p></li>
+      <li><span class="sx-num">3</span><h3>Read the numbers, and run the day</h3><p>Analytics at the office, with the date of your latest data on screen. If you also use the field side: routes, orders, offers and receipts on the handheld.</p></li>
     </ol>
-    <p class="sx-callout"><b>Honest about the data.</b> The numbers are as of your last import. This is a file import, not a live link to your ERP, and nothing is written back to it. Gross profit, unpaid invoices and open orders are not in the analytics today: they need a cost file and an invoice-status file, and those imports are not built yet.</p>
+    <p class="sx-callout"><b>Honest about the data.</b> The screens always show the date of your latest data. With an API link the data refreshes by itself; with files, the numbers are as of your last import. Prices in your ERP are never changed. Gross profit, unpaid invoices and open orders are not in the analytics today: they need a cost file and an invoice-status file, and those imports are not built yet.</p>
   </div>
 </section>
 
@@ -506,11 +537,11 @@
     <p class="section-tag">Frequently asked</p>
     <h2 class="h-big">Questions, answered.</h2>
     <div class="faq-list">
-<details class="faq-item"><summary>Can we buy only the field system, or only the analytics?</summary><div class="faq-answer"><p>Yes. You can take the field sales system for your team, the sales analytics for your ERP sales history, or both. The analytics need only your imported files: no handhelds and no recorded visits. The customer cards, the Overview, Customers, Products and Salespeople screens and the reports all work from the import.</p></div></details>
-<details class="faq-item"><summary><span>Does <span translate="no">ProInsights Sales</span> replace our order system?</span></summary><div class="faq-answer"><p>No. It works next to the order system you already use, and orders are still entered there. In <span translate="no">ProInsights Sales</span> the salesperson records the outcome of each visit: order taken, no order, closed or other work. The sales that follow show up in your numbers when you import your next ERP export.</p></div></details>
-<details class="faq-item"><summary>Does it change prices or documents in our ERP?</summary><div class="faq-answer"><p>Never. A special price is an offer that your approvers decide inside <span translate="no">ProInsights Sales</span>. The reference is the customer's last invoiced net unit price, and nothing is written back to your ERP.</p></div></details>
+<details class="faq-item"><summary>Can we buy only the field system, or only the analytics?</summary><div class="faq-answer"><p>Yes. You can take the field sales system for your team, the sales analytics for your ERP sales history, or both. The analytics need only your ERP data: no handhelds and no recorded visits. The customer cards, the Overview, Customers, Products and Salespeople screens and the reports all work from it.</p></div></details>
+<details class="faq-item"><summary><span>Does <span translate="no">ProInsights Sales</span> replace our order system?</span></summary><div class="faq-answer"><p>No. Your ERP stays your order system, and <span translate="no">ProInsights Sales</span> is where the order is taken. At the shop the salesperson opens the customer, starts from a suggested basket built from the customer's last three orders, checks the prices, which start at the customer's last invoiced net price, picks a delivery date and sends. The server prices the order again, gives it its own number and totals with VAT, and the office sees it at once. A price below the last invoice needs the salesperson's personal code and is logged. When we link to your ERP's API, the order goes into your ERP by itself, with no export and no import.</p></div></details>
+<details class="faq-item"><summary>Does it change prices or documents in our ERP?</summary><div class="faq-answer"><p>Prices, never. A special price is an offer that your approvers decide inside <span translate="no">ProInsights Sales</span>, against the customer's last invoiced net unit price. With an API link, the only thing sent to your ERP is the orders your salespeople take. Without one, nothing is written to your ERP and the office takes the orders out as a file.</p></div></details>
 <details class="faq-item"><summary>Do you track my salespeople all day?</summary><div class="faq-answer"><p>No. Salespeople are not tracked, and there is no trail of where they have been. Location is read only when a salesperson taps arrival or departure on an open day, and only after they have acknowledged the GPS notice. For each visit the app keeps the distance band (at the shop, near, far or unknown), the distance in metres, the GPS accuracy and a status code. It does not keep the salesperson's coordinates. The one exception is the shop's pin: it is saved once, on a shop's first visit, when the salesperson confirms 'I am at the shop', and the log records who set it and when. A weak signal counts as unknown, never as far.</p></div></details>
-<details class="faq-item"><summary>How does our sales data get in?</summary><div class="faq-answer"><p>Export customers, products, salespeople, sales documents and targets from your ERP as Excel or CSV and load them with the mapping wizard. Rows that cannot be accepted are listed before anything is sent, with a CSV of the refused rows to fix. The screens show the date of your latest data, so you always know how fresh the numbers are. It is a file import, not a live link to your ERP.</p></div></details>
+<details class="faq-item"><summary>How does our sales data get in?</summary><div class="faq-answer"><p>Through your ERP's API: we link to it, and customers, products, salespeople, sales documents and targets come in by themselves, so nobody exports or imports anything. If your ERP has no API, export the same data as Excel or CSV and load it with the mapping wizard. Rows that cannot be accepted are listed before anything is sent, with a CSV of the refused rows to fix. The screens show the date of your latest data, so you always know how fresh the numbers are.</p></div></details>
 <details class="faq-item"><summary>Which devices does it run on?</summary><div class="faq-answer"><p>Salespeople work on a phone or an Android handheld. Receipts print on a 58 mm roll from the Sunmi handheld through Chrome. The office works in a web browser on a computer.</p></div></details>
 <details class="faq-item"><summary>Is the receipt a tax document?</summary><div class="faq-answer"><p>No. It is a receipt for money collected. It carries your company's own name and logo and a signature line, and it states in Greek that it is not a tax document. <span translate="no">ProInsights Sales</span> records the payment; it does not process card payments.</p></div></details>
 <details class="faq-item"><summary>Who can see what?</summary><div class="faq-answer"><p>There are four roles: owner, office, salesperson and viewer. Owner, office and viewer read all customers, and only owner and office import data. A salesperson sees only their own customers, on the phone. The analytics screens are for owner, office and viewer. The database enforces the roles, so a hidden button is not the only barrier.</p></div></details>
