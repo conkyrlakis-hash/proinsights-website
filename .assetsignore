@@ -1,0 +1,11 @@
+# Files that must never be published with the site
+.git
+.gitignore
+.assetsignore
+README.md
+build_seo_site.py
+_screenshot.py
+_content
+proxy-worker
+wrangler.jsonc
+node_modules
