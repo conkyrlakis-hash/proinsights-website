@@ -30,3 +30,12 @@
 # Cyprus short slugs
 /cyprus/restaurants  /cyprus/restaurant-review-management            301
 /cyprus/hotels       /cyprus/hotel-reputation-management             301
+
+# Internal files: never serve them (belt and braces with .assetsignore)
+/.git/*            /                                                 302
+/.git              /                                                 302
+/README.md         /                                                 302
+/build_seo_site.py /                                                 302
+/wrangler.jsonc    /                                                 302
+/proxy-worker/*    /                                                 302
+/_content/*        /                                                 302
